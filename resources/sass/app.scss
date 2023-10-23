@@ -6,3 +6,15 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .main-container {
+        width: 75rem;
+    }
+}
+
+
