@@ -7,6 +7,9 @@
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
 
+// Import styles
+@import './home/banner.scss';
+
 body {
     display: flex;
     flex-direction: column;
