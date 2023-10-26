@@ -14,10 +14,9 @@
         <img src="{{ asset('assets/4.png') }}" alt="pizza_slice" class='slice_pizza slice4' >
         <img src="{{ asset('assets/3.png') }}" alt="pizza_slice" class='slice_pizza slice5' >
         <img src="{{ asset('assets/2.png') }}" alt="pizza_slice" class='slice_pizza slice6' >
-        <p class='loading-text'>Loading</p>
-        <p class='loading-text loading-dot1' >.</p>
-        <p class='loading-text loading-dot2' >.</p>
-        <p class='loading-text loading-dot3' >.</p>
+        <div class='loading-box' >
+            <p class='loading-text'>Loading.....</p>
+        </div>
         </div>
     </div>
 </body>
