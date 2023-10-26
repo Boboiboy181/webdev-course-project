@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite(['resources/sass/app.scss', 'resources/js/app.js','resources/js/splash_fade'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <title>Pizza</title>
 </head>
 <body>
