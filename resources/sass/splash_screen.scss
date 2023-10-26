@@ -64,3 +64,51 @@ body{
     rotate: 0deg;
     animation-delay: 1.8s;
 }
+.loading-text{
+    font-size:50px;
+    color: black;
+    position:absolute;
+    top: 452px;
+    left: 247px;
+}
+.loading-dot1, .loading-dot2, .loading-dot3 {
+    animation: text-animation 2s ease infinite;
+}
+.loading-dot1{
+    left: 426px;
+    animation-delay: 0s;
+}  
+.loading-dot2{
+    left: 436px;
+    animation-delay: 0.5s;
+}   
+.loading-dot3{
+    left: 446px;
+    animation-delay: 1s;
+}    
+
+
+@keyframes pop {
+    0% {
+    transform: scale(0.2);
+
+    }
+    50% {
+    transform: scale(1.05);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
+@keyframes text-animation {
+    0% {
+    transform: scale(0.2);
+
+    }
+    50% {
+    transform: scale(1.05);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
