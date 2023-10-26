@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/pizza', function () {
+Route::get('/', function () {
     return view('splash');
 });
