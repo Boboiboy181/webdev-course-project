@@ -1,6 +1,7 @@
 import './bootstrap';
 
 import '../sass/app.scss';
+import './splash_fade';
 
 import * as bootstrap from 'bootstrap';
 

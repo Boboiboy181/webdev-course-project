@@ -3,13 +3,14 @@
 
 // Variables
 @import 'variables';
-
+@import "splash_screen";
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
 @import './home/products.scss';
 @import 'header.scss';
 
 body {
+    background-image: url('assets/BG.png');
     display: flex;
     flex-direction: column;
     align-items: center;
