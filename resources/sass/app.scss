@@ -6,6 +6,8 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+@import './home/products.scss';
+@import 'header.scss';
 
 // Import styles
 @import './home/banner.scss';
