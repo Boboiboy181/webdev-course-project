@@ -9,6 +9,9 @@
 @import './home/products.scss';
 @import 'header.scss';
 
+// Import styles
+@import './home/banner.scss';
+
 body {
     background-image: url('assets/BG.png');
     display: flex;
