@@ -6,3 +6,19 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+@import 'header.scss';
+@import './home/banner.scss';
+@import './home/products.scss';
+@import 'footer.scss';
+@import 'booking.scss';
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .main-container {
+        width: 75rem;
+    }
+}

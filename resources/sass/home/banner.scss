@@ -1,0 +1,21 @@
+.banner-container {
+    text-align: center;
+
+    .dots-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+        gap: 18px;
+
+        .dot {
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+        }
+
+        .active {
+            background-color: $red-primary-color;
+        }
+    }
+}
