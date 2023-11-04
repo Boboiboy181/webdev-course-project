@@ -15,4 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home.home');
-});
+})->name('pizza.home');
+
+
+Route::get('/menu', function () {
+    return view('menu.menu');
+})->name('pizza.menu');

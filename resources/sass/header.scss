@@ -1,5 +1,4 @@
 .myheader {
-    width: 1200px;
     padding: 18px 42px;
 
     .navbar-brand {
@@ -24,4 +23,11 @@
         align-items: center;
         justify-content: space-around;
     }
+}
+
+.border-navbar {
+    border-radius: 10px;
+    border: 5px solid $orange-primary-color;
+    background-color: $white-primary-color;
+    margin-top: 20px;
 }

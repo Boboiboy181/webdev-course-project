@@ -2,7 +2,7 @@
 	background-color: rgba($pink-sub-color, .5);
 	padding: 60px 60px 39px 60px;
 	border-radius: 33px;
-	width: 71.25rem;
+    width: 100%;
 
 	h1 {
 		color: black;
@@ -23,8 +23,8 @@
 
 	.products-list {
 		margin-top: 72px;
-		justify-content: space-between;
-	
+		justify-content: space-around;
+
 		.product-card {
 			width: 320px;
 			border-radius: 32px;

@@ -1,8 +1,7 @@
-<!-- <link rel="stylesheet" href="../sass/app.sass"> -->
 <footer>
     <div class="footer-container">
     <div class="footer-logo">
-        <img class="logo" src="..\assets\Logo.png" alt="">
+        <img class="logo" src="{{url('/assets/Logo.png')}}" alt="">
     </div>
 
     <div class="footer-content">
@@ -14,11 +13,11 @@
             <tr>
                 <td class="ft-list"><a href="https://pizza4ps.com/vn/policy/">Privacy Policy</a></td>
                 <td class="ft-menu">
-                    <img class="socialmedia" src="..\assets\facebook.png" alt="">
-                    <img class="socialmedia" src="..\assets\instagram.png" alt="">
-                    <img class="socialmedia" src="..\assets\linkedin.png" alt="">
-                    <img id="youtube" src="..\assets\vector.png" alt="">
-                </td>  
+                    <img class="socialmedia" src="{{url('/assets/facebook.png')}}" alt="Facebook logo">
+                    <img class="socialmedia" src="{{url('/assets/instagram.png')}}" alt="Instagram logo">
+                    <img class="socialmedia" src="{{url('/assets/linkedin.png')}}" alt="Linkedin logo">
+                    <img id="youtube" src="{{url('/assets/vector.png')}}" alt="Youtube logo">
+                </td>
             </tr>
             <tr>
                 <td class="ft-list" colspan="2"><a href="https://pizza4ps.talent.vn/">Career</a></td>
