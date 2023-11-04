@@ -10,6 +10,14 @@
 @import './home/banner.scss';
 @import './home/products.scss';
 
+// Menu
+@import './menu/combo.scss';
+@import './menu/pizza.scss';
+@import './menu/dessert.scss';
+@import './menu/drink.scss';
+@import './menu/side.scss';
+@import './menu/sub-nav.scss';
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;

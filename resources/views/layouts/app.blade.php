@@ -11,10 +11,10 @@
     @vite('resources/js/app.js')
 </head>
 <body class="{{!request()->is('/')? 'background-linear': ''}}">
-<main class="container">
+<main class="app-container">
 @include('header')
 @yield('content')
-    @if(!request()->is('menu'))
+    @if (!request()->is('menu*'))
         @include('footer')
     @endif
 </main>

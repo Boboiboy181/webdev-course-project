@@ -1,0 +1,39 @@
+.sub-nav {
+    &-container {
+        width: 100vw;
+        background-color: $white-primary-color;
+        margin-top: 20px;
+        padding: 20px 0;
+    }
+
+    &-list {
+        width: 100vw;
+        margin: 0;
+        list-style: none;
+        padding: unset;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        li {
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                color: $black-primary-color;
+                font-size: 2rem;
+                font-weight: 700;
+
+                &:hover {
+                    color: $orange-primary-color;
+                }
+
+                &.active {
+                    color: $orange-primary-color;
+                    text-decoration: $orange-primary-color underline;
+                }
+            }
+
+        }
+    }
+}
