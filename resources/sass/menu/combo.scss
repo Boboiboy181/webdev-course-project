@@ -1,0 +1,74 @@
+.combo-container {
+    width: 1128px;
+    height: 600px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 2px solid #FF8947;
+    box-shadow: 8px 8px 4px 0px #FFB891;
+    background: none;
+    margin: 80px 156px;
+    background: linear-gradient(158deg, #6F2800 44.61%, #FF8947 113.68%);
+
+    .col-left {
+        position: relative;
+    }
+
+    .col-left h1 {
+        padding-left: 22px;
+        padding-top: 9px;
+        color: #FFF;
+        font-family: Quicksand;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-align: left;
+    }
+
+    .combo-button {
+        padding-left: 64px;
+        padding-top: 80px;
+    }
+
+    .combo-button a {
+        text-decoration: none;
+        display: inline-block;
+        color: #FFF;
+        font-family: Quicksand;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 360px;
+        height: 60px;
+        flex-shrink: 0;
+        border-radius: 5px;
+        background: #FF8947;
+        padding: 15px 58px;
+        margin: 10px 0px;
+    }
+
+    .col-right {
+        position: relative;
+        text-align: right;
+        padding: 40px 44px;
+    }
+
+    .col-right img {
+        background-color: #FFF;
+        border-radius: 9px;
+        padding: 9px 30px;
+
+    }
+
+    .col-right p {
+        color: #FFF;
+        text-align: right;
+        font-family: Quicksand;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-top: 40px;
+    }
+}
