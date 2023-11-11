@@ -45,6 +45,11 @@
             font-weight: 700;
             line-height: normal;
             width: 90%;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
         &-option {

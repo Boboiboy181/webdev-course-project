@@ -1,13 +1,16 @@
-@props(['category','img', 'name', 'price', 'size'])
+@props(['category', 'img', 'name', 'price', 'size'])
 
-<div class="{{$category}}-item">
-    <div class="{{$category}}-img">
-        <img src="{{url($img)}}" alt="">
+<div class="{{ $category }}-item">
+    <div class="{{ $category }}-img">
+        <img src="{{ url($img) }}" alt="">
     </div>
-    <div class="{{$category}}-detail">
-        <p class="{{$category}}-name">{{$name}}</p>
-        <p class="{{$category}}-option">
-            <span class="size">{{$size}}</span> - <span class="price">{{$price}} VNĐ</span>
+    <div class="{{ $category }}-detail">
+        <a class="{{ $category }}-name">{{ $name }}</a>
+        <p class="{{ $category }}-option">
+            @if(isset($size))
+                <span class="size">{{ $size }}</span> -
+            @endif
+            <span class="price">{{ $price }} VNĐ</span>
         </p>
     </div>
 </div>
