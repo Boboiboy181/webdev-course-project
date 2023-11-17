@@ -1,34 +1,81 @@
-.chicken-img-detail{
-    width: 100%;
-    height: auto;
-    // margin-top: 20%;
-    margin-right: -20px;
-}
+.sides-container {
+    padding: 100px 80px;
+    height: fit-content;
 
-.chicken-img{
-    border-radius: 4px;
-    background-color: white;
-    background-image: url('/assets/menu/side/Gà Viên Phô Mai đút lò.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
+    .side {
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
 
-.chicken-name{
-    color: white;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-}
-.chickens-container{
-    border-radius: 12px;
-    border: 1.5px solid #FF8947;
-    box-shadow: 5px 5px #6f2901, 7px 7px 5px #FF8947 ;
-     
-}
+        &-category {
+            text-transform: capitalize;
+            text-align: center;
+            color: white;
+            font-size: 4rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 30px;
+        }
 
-.menusides-title{
-    font-size: xx-large;
-    color: white;
-    text-align: center;
-    font-weight: bold;
+        &-item {
+            border: 1px solid $orange-sub-color;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 22.5%;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 2px 2px 3px 2px rgba($orange-sub-color, $alpha: .8);
+            cursor: pointer;
+            min-height: 300px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        &-img {
+            overflow: hidden;
+            background-color: #FFF;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.4s ease-in-out;
+            }
+        }
+
+        &-detail {
+            flex: 1;
+            padding: 20px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        &-name {
+            color: #FFF;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &-option {
+            margin-top: 10px;
+            color: #FFF;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
 }
