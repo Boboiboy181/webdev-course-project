@@ -1,0 +1,69 @@
+.desserts-container {
+    padding: 100px 80px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: space-between;
+
+    .dessert {
+        &-item {
+            border: 1px solid $orange-sub-color;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 22.5%;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 2px 2px 3px 2px rgba($orange-sub-color, $alpha: .8);
+            cursor: pointer;
+            height: fit-content;
+        }
+
+        &-img {
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.4s ease-in-out;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        &-detail {
+            padding: 20px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            text-align: center;
+        }
+
+        &-name {
+            color: #FFF;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &-option {
+            margin-top: 10px;
+            color: #FFF;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}
