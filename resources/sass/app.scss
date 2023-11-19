@@ -32,8 +32,7 @@ body {
 }
 
 .background-linear {
-    height: 100vh;
     width: 100vw;
-    background: linear-gradient(160deg, $brown-primary-color 50%, $orange-primary-color 100%) no-repeat;
+    background: linear-gradient(160deg, $brown-primary-color 60%, $orange-primary-color 100%) no-repeat;
     background-size: cover;
 }
