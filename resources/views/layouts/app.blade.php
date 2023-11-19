@@ -7,15 +7,16 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     @vite('resources/js/app.js')
 </head>
-<body>
-<main class="main-container">
+<body class="{{!request()->is('/')? 'background-linear': ''}}">
+<main class="app-container">
 @include('header')
 @yield('content')
-@include('footer')
+    @if (!request()->is('menu*'))
+        @include('footer')
+    @endif
 </main>
 </body>
 </html>

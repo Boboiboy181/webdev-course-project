@@ -1,6 +1,3 @@
-// Fonts
-@import url('https://fonts.bunny.net/css?family=Nunito');
-
 // Variables
 @import 'variables';
 
@@ -8,17 +5,34 @@
 @import 'bootstrap/scss/bootstrap';
 
 @import 'header.scss';
-@import './home/banner.scss';
-@import './home/products.scss';
 @import 'footer.scss';
 @import 'booking.scss';
+@import './home/banner.scss';
+@import './home/products.scss';
+
+// Menu
+@import './menu/combo.scss';
+@import './menu/pizza.scss';
+@import './menu/dessert.scss';
+@import './menu/drink.scss';
+@import './menu/side.scss';
+@import './menu/sub-nav.scss';
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
 
 body {
+    font-family: 'Quicksand', sans-serif !important;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: $body-bg;
+}
 
-    .main-container {
-        width: 75rem;
-    }
+.background-linear {
+    width: 100vw;
+    background: linear-gradient(160deg, $brown-primary-color 60%, $orange-primary-color 100%) no-repeat;
+    background-size: cover;
 }

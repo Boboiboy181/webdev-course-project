@@ -1,9 +1,9 @@
-<section class="myheader">
+<section class="myheader {{request()->is('menu*') ? 'border-navbar' : ''}}">
     <div class="nav-container row">
         {{-- Start Right Nav --}}
-        <div class="col-9">
+        <div class="col-10">
             <ul class="nav justify-content-left">
-                <li><a class="navbar-brand" href="#">
+                <li><a class="navbar-brand" href="{{route('pizza.home')}}">
                         <img src="{{ url('/assets/Logo.png') }}" alt="Logo" width="50" height="32"
                             class="d-inline-block">
                     </a></li>
@@ -11,7 +11,7 @@
                     <a class="nav-link text-black" href="#">KHUYẾN MÃI</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-black" href="#">THỰC ĐƠN</a>
+                    <a class="nav-link text-black" href="{{route('pizza.menu')}}">THỰC ĐƠN</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-black" href="#">CỬA HÀNG</a>
@@ -21,7 +21,7 @@
         {{-- End Right Nav --}}
 
         {{-- Start Left Nav --}}
-        <div class="col-3 justify-content-right text-center">
+        <div class="col-2 justify-content-right text-center">
             <div class="icons-container">
                 <div>
                     <a href="#">THEO DÕI <br> ĐƠN HÀNG</a>
@@ -59,7 +59,5 @@
             </div>
         </div>
         {{-- End Left Nav --}}
-    </div>
-
     </div>
 </section>
