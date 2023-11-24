@@ -1,8 +1,8 @@
-@props(['category', 'img', 'name', 'price', 'size'])
+@props(['category', 'imgURL', 'name', 'price', 'size'])
 
 <div class="{{ $category }}-item">
     <div class="{{ $category }}-img">
-        <img src="{{ url($img) }}" alt="">
+        <img src="{{ url($imgURL) }}" alt="">
     </div>
     <div class="{{ $category }}-detail">
         <a class="{{ $category }}-name">{{ $name }}</a>
