@@ -1,4 +1,4 @@
-<section class="myheader {{request()->is('menu*') ? 'border-navbar' : ''}}">
+<section class="myheader {{request()->is('menu*')}}">
     <div class="nav-container row">
         {{-- Start Right Nav --}}
         <div class="col-10">
@@ -8,13 +8,13 @@
                              class="d-inline-block">
                     </a></li>
                 <li class="nav-item">
-                    <a class="nav-link text-black" href="#">KHUYẾN MÃI</a>
+                    <a class="nav-link text-black" href="#">PROMOTION</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-black" href="{{route('pizzas.index')}}">THỰC ĐƠN</a>
+                    <a class="nav-link text-black" href="{{route('pizzas.index')}}">MENU</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-black" href="#">CỬA HÀNG</a>
+                    <a class="nav-link text-black" href="#">STORES</a>
                 </li>
             </ul>
         </div>
@@ -24,7 +24,7 @@
         <div class="col-2 justify-content-right text-center">
             <div class="icons-container">
                 <div>
-                    <a href="#">THEO DÕI <br> ĐƠN HÀNG</a>
+                    <a href="#">MENU <br> TRACKING</a>
                 </div>
                 <div>
                     <a class="icon-link text-black" href="#">
