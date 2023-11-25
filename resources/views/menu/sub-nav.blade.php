@@ -1,8 +1,13 @@
+@php
+    $tags = ['All', 'Seafood', 'Beef', 'Chicken', 'Pork', 'Vegetarian'];
+    $currentTag = request()->query('tag', '');
+@endphp
+
 <div class="sub-nav-container">
     <ul class="sub-nav-list">
         <li><a class="{{request()->is('menu/combos') ? 'active' : ''}}" href="{{route('pizza.combos')}}">Combo</a></li>
-        <li><a class="{{(request()->is('pizzas.index') ? 'active' : '')}}"
-               href="{{route('pizza.pizzas')}}">Pizza</a></li>
+        <li><a class="{{(request()->is('menu/pizzas') ? 'active' : '')}}"
+               href="{{route('pizzas.index')}}">Pizza</a></li>
         <li><a class="{{request()->is('menu/sides') ? 'active' : ''}}" href="{{route('pizza.sides')}}">Side dishes</a>
         </li>
         <li><a class="{{request()->is('menu/desserts') ? 'active' : ''}}" href="{{route('pizza.desserts')}}">Dessert</a>
@@ -12,12 +17,12 @@
     </ul>
     <div class="sub-nav-option {{ request()->is('menu/pizzas', 'menu/sides', 'menu') ? '' : 'none' }}">
         <ul>
-            <li><a>All</a></li>
-            <li><a>Seafood</a></li>
-            <li><a>Beef</a></li>
-            <li><a>Chicken</a></li>
-            <li><a>Pork</a></li>
-            <li><a>Vegetarian</a></li>
+            @foreach($tags as $tag)
+                <li>
+                    <a class="{{ $currentTag === 'All' || (empty($currentTag) && $tag === 'All') || $currentTag === $tag ? 'active' : '' }}"
+                       href="{{ route('pizzas.index', ['tag' => $tag === 'All' ? null : $tag]) }}">{{ $tag }}</a>
+                </li>
+            @endforeach
         </ul>
     </div>
 </div>

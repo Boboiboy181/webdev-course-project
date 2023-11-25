@@ -7,8 +7,8 @@
     <div class="{{ $category }}-detail">
         <a class="{{ $category }}-name">{{ $name }}</a>
         <p class="{{ $category }}-option">
-            @if(isset($size))
-                <span class="size">{{ $size }}</span> -
+            @if(isset($size) || $category == 'pizza')
+                <span class="size">{{ $size ? $size : 'Medium' }}</span> - <br>
             @endif
             <span class="price">{{ $price }} VNĐ</span>
         </p>

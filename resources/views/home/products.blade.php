@@ -1,25 +1,25 @@
 <?php
 $todayHighlight = [
     [
-        'img' => '/assets/Pizza_Extra_Topping.jpg',
+        'imgURL' => '/assets/Pizza_Extra_Topping.jpg',
         'name' => 'PIZZA SIÊU TOPPING HẢI SẢN XỐT MAYONNAISE - SUPER TOPPING OCEAN MANIA',
         'size' => 'Medium',
         'price' => '235,000',
     ],
     [
-        'img' => '/assets/Pizza_Extra_Topping.jpg',
+        'imgURL' => '/assets/Pizza_Extra_Topping.jpg',
         'name' => 'PIZZA SIÊU TOPPING HẢI SẢN XỐT MAYONNAISE - SUPER TOPPING OCEAN MANIA',
         'size' => 'Medium',
         'price' => '235,000',
     ],
     [
-        'img' => '/assets/Pizza_Extra_Topping.jpg',
+        'imgURL' => '/assets/Pizza_Extra_Topping.jpg',
         'name' => 'PIZZA SIÊU TOPPING HẢI SẢN XỐT MAYONNAISE - SUPER TOPPING OCEAN MANIA',
         'size' => 'Medium',
         'price' => '235,000',
     ],
     [
-        'img' => '/assets/Pizza_Extra_Topping.jpg',
+        'imgURL' => '/assets/Pizza_Extra_Topping.jpg',
         'name' => 'PIZZA SIÊU TOPPING HẢI SẢN XỐT MAYONNAISE - SUPER TOPPING OCEAN MANIA',
         'size' => 'Medium',
         'price' => '235,000',
@@ -86,7 +86,7 @@ $todayHighlight = [
             <x-product-card
                 :category="'todayHighlight'"
                 :name="$value['name']"
-                :img="$value['img']"
+                :imgURL="$value['imgURL']"
                 :price="$value['price']"
                 :size="$value['size']"
             />
