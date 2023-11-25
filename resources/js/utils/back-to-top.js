@@ -1,4 +1,6 @@
+import { Button } from "bootstrap"
+
 // TODO: Code your back-to-top button here
 const backToTop = () => {
-  // code goes here
+    window.backToTop(0,0);
 }
