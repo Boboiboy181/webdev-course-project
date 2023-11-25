@@ -8,6 +8,7 @@
                 @foreach($value as $pizza)
                     <x-product-card
                         :category="'pizza'"
+                        :id="$pizza['_id']"
                         :name="$pizza['name']"
                         :imgURL="$pizza['imgURL']"
                         :price="$pizza['price']"
@@ -16,5 +17,6 @@
                 @endforeach
             </div>
         @endforeach
+        <x-modal/>
     </div>
 @endsection

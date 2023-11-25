@@ -1,4 +1,4 @@
 // TODO: Code your sticky nav-bar here
-const sticky = () => {
-  // code goes here
+export const sticky = () => {
+    // code goes here
 }

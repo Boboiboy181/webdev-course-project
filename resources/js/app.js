@@ -4,9 +4,12 @@ import '../sass/app.scss';
 
 import * as bootstrap from 'bootstrap';
 
-import './partials/back-to-top';
-import './partials/sticky';
-import './partials/modal';
+import jQuery from 'jquery';
+import {backToTop} from "./partials/back-to-top.js";
+import {sticky} from "./partials/sticky.js";
+import {modal} from "./partials/modal.js";
+
+window.$ = jQuery;
 
 backToTop();
 sticky();
