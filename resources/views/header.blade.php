@@ -24,7 +24,7 @@
         <div class="col-2 justify-content-right text-center">
             <div class="icons-container">
                 <div>
-                    <a href="#">THEO DÕI <br> ĐƠN HÀNG</a>
+                    <a style="width: 85px;" href="#">THEO DÕI <br> ĐƠN HÀNG</a>
                 </div>
                 <div>
                     <a class="icon-link text-black" href="#">
