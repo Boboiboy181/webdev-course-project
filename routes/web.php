@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource('/menu/pizzas', \App\Http\Controllers\PizzaController::class);
+Route::resource('/menu/sides', \App\Http\Controllers\SideController::class);
 
 Route::get('/', function () {
     return view('home.home');
@@ -22,10 +23,6 @@ Route::get('/', function () {
 Route::get('/menu/combos', function () {
     return view('menu.combo');
 })->name('pizza.combos');
-
-Route::get('/menu/sides', function () {
-    return view('menu.side');
-})->name('pizza.sides');
 
 Route::get('/menu/desserts', function () {
     return view('menu.dessert');

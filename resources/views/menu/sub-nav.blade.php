@@ -8,7 +8,8 @@
         <li><a class="{{request()->is('menu/combos') ? 'active' : ''}}" href="{{route('pizza.combos')}}">Combo</a></li>
         <li><a class="{{(request()->is('menu/pizzas') ? 'active' : '')}}"
                href="{{route('pizzas.index')}}">Pizza</a></li>
-        <li><a class="{{request()->is('menu/sides') ? 'active' : ''}}" href="{{route('pizza.sides')}}">Side dishes</a>
+        <li><a class="{{request()->is('menu/sides') ? 'active' : ''}}" 
+                href="{{route('sides.index')}}">Side dishes</a>
         </li>
         <li><a class="{{request()->is('menu/desserts') ? 'active' : ''}}" href="{{route('pizza.desserts')}}">Dessert</a>
         </li>
