@@ -27,7 +27,6 @@ class PizzaController extends Controller
         return response()->json(['content' => $content->render()]);
     }
 
-
     public function store(): \Illuminate\Http\RedirectResponse
     {
         Pizza::query()->create([

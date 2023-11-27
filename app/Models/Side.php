@@ -23,6 +23,7 @@ class Side extends Model
     {
         if ($filterSides) {
             $data = $this->query()->where('category', $filterSides)->get();
+
             return Helper::convertToCategory($data);
         }
 
