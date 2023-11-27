@@ -1,4 +1,4 @@
-<section class="myheader {{request()->is('menu*')}}">
+<section class="myheader">
     <div class="nav-container row">
         {{-- Start Right Nav --}}
         <div class="col-10">

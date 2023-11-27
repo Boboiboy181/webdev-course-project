@@ -17,6 +17,5 @@
                 @endforeach
             </div>
         @endforeach
-        <x-modal/>
     </div>
 @endsection

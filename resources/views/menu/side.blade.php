@@ -3,30 +3,35 @@
 $sides = [
     'chicken' => [
         [
+            '_id' => '1',
             'name' => 'Cánh gà nướng BBQ (4 miếng)',
             'imgURL' => 'assets/menu/side/Cánh Gà BBQ Kiểu Mỹ (4 miếng).png',
             'price' => 107500,
             'description' => 'Cánh Gà, Xốt BBQ',
         ],
         [
+            '_id' => '1',
             'name' => 'Cánh gà nướng BBQ (6 miếng)',
             'imgURL' => 'assets/menu/side/Cánh Gà BBQ Kiểu Mỹ (6 miếng).png',
             'price' => 107500,
             'description' => 'Cánh Gà, Xốt BBQ',
         ],
         [
+            '_id' => '1',
             'name' => 'Khai vị tổng hợp',
             'imgURL' => 'assets/menu/side/Khai Vị Tổng Hợp.png',
             'price' => 97500,
             'description' => '2 miếng Cánh gà nướng BBQ, 3 miếng Xúc Xích Xông Khói Đút Lò và Khoai tây phô mai đút lò',
         ],
         [
+            '_id' => '1',
             'name' => 'Gà viên đút lò phô mai',
             'imgURL' => 'assets/menu/side/Gà Viên Phô Mai đút lò.png',
             'price' => 68000,
             'description' => 'Gà Viên Popcorn, Thịt Heo Xông Khói, Phô Mai Mozarella, Xốt Pizza',
         ],
         [
+            '_id' => '1',
             'name' => 'Gà nướng Satay',
             'imgURL' => 'assets/menu/side/Gà Xiên Nướng Satay.png',
             'price' => 97500,
@@ -35,6 +40,7 @@ $sides = [
     ],
     'spaghetti' => [
         [
+            '_id' => '1',
             'name' => 'Mì Ý dăm bông & nấm sốt kem',
             'imgURL' => 'assets/menu/side/Mỳ Ý Dăm Bông _ Nấm Xốt Kem.png',
             'price' => 87500,
@@ -42,6 +48,7 @@ $sides = [
             'category' => 'spaghetti'
         ],
         [
+            '_id' => '1',
             'name' => 'Mì Ý hải sản đút lò',
             'imgURL' => 'assets/menu/side/Mỳ Ý Hải Sản Đút Lò.png',
             'price' => 87500,
@@ -49,6 +56,7 @@ $sides = [
             'category' => 'spaghetti'
         ],
         [
+            '_id' => '1',
             'name' => 'Mì Ý rau củ đút lò',
             'imgURL' => 'assets/menu/side/Mỳ Ý Rau Củ Đút Lò.png',
             'price' => 78000,
@@ -56,6 +64,7 @@ $sides = [
             'category' => 'spaghetti'
         ],
         [
+            '_id' => '1',
             'name' => 'Mì Ý bò bằm đút lò',
             'imgURL' => 'assets/menu/side/Mỳ Ý Bò Bằm Đút Lò.png',
             'price' => 97500,
@@ -65,6 +74,7 @@ $sides = [
     ],
     'sausage' => [
         [
+            '_id' => '1',
             'name' => 'Bánh hoa hồng xúc xích Ý (4 BÁNH)',
             'imgURL' => 'assets/menu/side/Bánh hoa hồng xúc xích Ý (4 BÁNH).png',
             'price' => 99000,
@@ -72,6 +82,7 @@ $sides = [
             'category' => 'sausage'
         ],
         [
+            '_id' => '1',
             'name' => 'Xúc Xích Xông Khói Đút Lò (4 miếng)',
             'imgURL' => 'assets/menu/side/Xúc Xích Xông Khói Đút Lò (4 miếng).png',
             'price' => 48500,
@@ -79,6 +90,7 @@ $sides = [
             'category' => 'sausage'
         ],
         [
+            '_id' => '1',
             'name' => 'Xúc Xích Xông Khói Đút Lò (8 miếng)',
             'imgURL' => 'assets/menu/side/Xúc Xích Xông Khói Đút Lò (8 miếng).png',
             'price' => 87500,
@@ -88,6 +100,7 @@ $sides = [
     ],
     'bread' => [
         [
+            '_id' => '1',
             'name' => 'Bánh Sừng Bò Nhân Bò Beefsteak Phô Mai',
             'imgURL' => 'assets/menu/side/Bánh Sừng Bò Nhân Bò Beefsteak Phô Mai.png',
             'price' => 97500,
@@ -95,6 +108,7 @@ $sides = [
             'category' => 'bread'
         ],
         [
+            '_id' => '1',
             'name' => 'Bánh Mì Nướng Phô Mai Chấm Sữa',
             'imgURL' => 'assets/menu/side/Bánh Mì Nướng Phô Mai Chấm Sữa.png',
             'price' => 68000,
@@ -102,6 +116,7 @@ $sides = [
             'category' => 'bread'
         ],
         [
+            '_id' => '1',
             'name' => 'Bánh Mì Nướng Bơ Tỏi Chấm Sữa',
             'imgURL' => 'assets/menu/side/Bánh Mì Nướng Bơ Tỏi Chấm Sữa.png',
             'price' => 58000,
@@ -109,6 +124,7 @@ $sides = [
             'category' => 'bread'
         ],
         [
+            '_id' => '1',
             'name' => 'Bánh Mì Nướng Phô Mai',
             'imgURL' => 'assets/menu/side/Bánh Mì Nướng Phô Mai.png',
             'price' => 58000,
@@ -116,6 +132,7 @@ $sides = [
             'category' => 'bread'
         ],
         [
+            '_id' => '1',
             'name' => 'Bánh Mì Nướng Bơ Tỏi',
             'imgURL' => 'assets/menu/side/Bánh Mì Nướng Phô Mai.png',
             'price' => 48500,
@@ -125,6 +142,7 @@ $sides = [
     ],
     'potato' => [
         [
+            '_id' => '1',
             'name' => 'Khoai Tây Phô Mai Đút Lò',
             'imgURL' => 'assets/menu/side/Khoai Tây Phô Mai Đút Lò.png',
             'price' => 48500,
@@ -147,6 +165,7 @@ $sides = [
                 @foreach($value as $index => $item)
                     <x-product-card
                         :category="'side'"
+                        :id="$item['_id']"
                         :name="$item['name']"
                         :imgURL="$item['imgURL']"
                         :price="$item['price']"

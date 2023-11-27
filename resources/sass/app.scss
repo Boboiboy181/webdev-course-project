@@ -8,8 +8,12 @@
 @import 'bootstrap/scss/bootstrap';
 
 // Partials
-@import 'partials/back-to-top.scss';
+@import 'partials/back-to-top';
 
+// Components
+@import 'components/modal';
+
+// Home
 @import 'header.scss';
 @import 'footer.scss';
 @import './home/booking';
@@ -23,6 +27,7 @@
 @import './menu/drink';
 @import './menu/side';
 @import './menu/sub-nav';
+@import './menu/product-detail';
 
 html {
     font-size: 62.5%;
