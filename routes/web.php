@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DessertController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('/menu/pizzas', \App\Http\Controllers\PizzaController::class);
 Route::resource('/menu/sides', \App\Http\Controllers\SideController::class);
+Route::resource('/menu/drinks', \App\Http\Controllers\DrinkController::class);
+Route::resource('/menu/desserts', \App\Http\Controllers\DessertController::class);
 
 Route::get('/', function () {
     return view('home.home');
@@ -24,10 +27,3 @@ Route::get('/menu/combos', function () {
     return view('menu.combo');
 })->name('pizza.combos');
 
-Route::get('/menu/desserts', function () {
-    return view('menu.dessert');
-})->name('pizza.desserts');
-
-Route::get('/menu/drinks', function () {
-    return view('menu.drink');
-})->name('pizza.drinks');
