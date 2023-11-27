@@ -20,6 +20,14 @@ class PizzaController extends Controller
         return view('menu.pizza', ['pizzas' => $this->pizza->getPizzas($filterType)]);
     }
 
+    public function show(string $pizza): \Illuminate\Http\JsonResponse
+    {
+        $content = view('menu.product-detail', ['item' => $this->pizza::query()->find($pizza)]);
+
+        return response()->json(['content' => $content->render()]);
+    }
+
+
     public function store(): \Illuminate\Http\RedirectResponse
     {
         Pizza::query()->create([
