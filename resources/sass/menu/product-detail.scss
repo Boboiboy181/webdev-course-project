@@ -1,0 +1,53 @@
+@mixin optionTextStyle() {
+    color: $black-primary-color;
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.product-detail {
+    &-header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 20px;
+
+        img {
+            border-radius: 10px;
+            width: 200px;
+        }
+
+        p {
+            color: #fff;
+            font-size: 2.2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+    &-body {
+        border-top: 2px solid rgba(white, .5);
+        border-bottom: 2px solid rgba(white, .5);
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        p {
+            @include optionTextStyle();
+        }
+    }
+
+    &-footer {
+        border-bottom: 2px solid rgba(white, .5);
+        padding: 10px 0;
+
+        p {
+            @include optionTextStyle();
+        }
+    }
+}
+
+.none {
+    display: none;
+}

@@ -8,6 +8,7 @@
                 @foreach($value as $index => $item)
                     <x-product-card
                         :category="'side'"
+                        :id="$item['_id']"
                         :name="$item['name']"
                         :imgURL="$item['imgURL']"
                         :price="$item['price']"
