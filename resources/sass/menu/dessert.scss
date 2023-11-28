@@ -8,14 +8,16 @@
 
     .dessert {
         &-item {
-            border: 1px solid $orange-sub-color;
+            border: 1px solid $color-2-primary;
             border-radius: 15px;
             overflow: hidden;
             width: 22.5%;
             transition: all 0.3s ease-in-out;
-            box-shadow: 2px 2px 3px 2px rgba($orange-sub-color, $alpha: .8);
+            box-shadow: 2px 2px 3px 2px rgba($color-2-primary, $alpha: .8);
             cursor: pointer;
-            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            max-height: 300px;
         }
 
         &-img {
@@ -36,16 +38,16 @@
         }
 
         &-detail {
+            flex: 1;
             padding: 20px 30px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 100%;
             text-align: center;
         }
 
         &-name {
-            color: #FFF;
+            color: $color-4-primary;
             font-size: 1.8rem;
             font-style: normal;
             font-weight: 700;
@@ -59,7 +61,7 @@
 
         &-option {
             margin-top: 10px;
-            color: #FFF;
+            color: $color-4-primary;
             font-size: 1.6rem;
             font-style: normal;
             font-weight: 400;

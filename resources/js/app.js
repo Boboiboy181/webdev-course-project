@@ -4,9 +4,9 @@ import '../sass/app.scss';
 
 import * as bootstrap from 'bootstrap';
 
-import './partials/back-to-top';
-import './partials/sticky';
-import './partials/modal';
+import { backToTop } from './partials/back-to-top';
+import { sticky } from './partials/sticky';
+import { modal } from './partials/modal';
 
 backToTop();
 sticky();
