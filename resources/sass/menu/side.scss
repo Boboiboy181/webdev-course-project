@@ -13,21 +13,21 @@
         &-category {
             text-transform: capitalize;
             text-align: center;
-            color: white;
             font-size: 4rem;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
             margin-bottom: 30px;
+            color: $color-1-primary;
         }
 
         &-item {
-            border: 1px solid $orange-sub-color;
+            border: 1px solid $color-2-primary;
             border-radius: 15px;
             overflow: hidden;
             width: 22.5%;
             transition: all 0.3s ease-in-out;
-            box-shadow: 2px 2px 3px 2px rgba($orange-sub-color, $alpha: .8);
+            box-shadow: 2px 2px 3px 2px rgba($color-2-primary, $alpha: .8);
             cursor: pointer;
             min-height: 300px;
             display: flex;
@@ -37,7 +37,7 @@
 
         &-img {
             overflow: hidden;
-            background-color: #FFF;
+            background: rgba($color-4-primary, $alpha: .5);
 
             img {
                 width: 100%;
@@ -54,15 +54,16 @@
             flex-direction: column;
             justify-content: space-between;
             text-align: center;
+            color: $color-4-primary;
         }
 
         &-name {
-            color: #FFF;
             font-size: 1.8rem;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
             text-decoration: none;
+            color: $color-4-primary;
 
             &:hover {
                 text-decoration: underline;
@@ -71,7 +72,6 @@
 
         &-option {
             margin-top: 10px;
-            color: #FFF;
             font-size: 1.6rem;
             font-style: normal;
             font-weight: 400;
