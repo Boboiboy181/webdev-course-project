@@ -20,6 +20,13 @@ class SideController extends Controller
         return view('menu.side', ['sides' => $this->side->getSides($filterType)]);
     }
 
+    public function show(string $side): \Illuminate\Http\JsonResponse
+    {
+        $content = view('menu.product-detail', ['item' => $this->side::query()->find($side)]);
+
+        return response()->json(['content' => $content->render()]);
+    }
+
     public function store(): \Illuminate\Http\RedirectResponse
     {
         Side::query()->create([

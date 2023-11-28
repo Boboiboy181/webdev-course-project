@@ -1,6 +1,13 @@
 @php
     $tags = ['All', 'Seafood', 'Beef', 'Chicken', 'Pork', 'Vegetarian'];
     $currentTag = request()->query('tag', '');
+
+    $request = '';
+    if (request()->is('menu/pizzas')) {
+        $request = 'pizzas.index';
+    } elseif (request()->is('menu/sides')) {
+        $request = 'sides.index';
+    }
 @endphp
 
 <div class="sub-nav-container">
@@ -20,14 +27,12 @@
     </ul>
     <div class="sub-nav-option {{ request()->is('menu/pizzas', 'menu/sides', 'menu') ? '' : 'none' }}">
         <ul>
-            @foreach($tags as $tag)
+            @foreach ($tags as $tag)
                 <li>
                     <a class="{{ $currentTag === 'All' || (empty($currentTag) && $tag === 'All') || $currentTag === $tag ? 'active' : '' }}"
-                       href="{{ route('pizzas.index', ['tag' => $tag === 'All' ? null : $tag]) }}">{{ $tag }}</a>
+                        href="{{ route($request, ['tag' => $tag === 'All' ? null : $tag]) }}">{{ $tag }}</a>
                 </li>
             @endforeach
         </ul>
     </div>
 </div>
-
-
