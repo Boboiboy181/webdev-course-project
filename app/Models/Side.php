@@ -22,7 +22,7 @@ class Side extends Model
     public function getSides($filterSides = null): Collection|array
     {
         if ($filterSides) {
-            $data = $this->query()->where('category', $filterSides)->get();
+            $data = $this->query()->where('toppingType', $filterSides)->get();
 
             return Helper::convertToCategory($data);
         }

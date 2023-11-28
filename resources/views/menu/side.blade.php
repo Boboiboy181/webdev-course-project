@@ -5,13 +5,10 @@
         @foreach($sides as $key => $value)
             <h2 class="side-category">{{$key}}</h2>
             <div class="side-list">
-                @foreach($value as $index => $item)
+                @foreach($value as $index => $side)
                     <x-product-card
                         :category="'side'"
-                        :id="$item['_id']"
-                        :name="$item['name']"
-                        :imgURL="$item['imgURL']"
-                        :price="$item['price']"
+                        :item="$side"
                     />
                 @endforeach
             </div>

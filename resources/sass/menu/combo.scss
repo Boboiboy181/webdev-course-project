@@ -6,6 +6,7 @@
 }
 
 .combo-item {
+    padding: 40px;
     border-radius: 15px;
     border: 2px solid $color-2-primary;
     box-shadow: 2px 2px 3px 2px rgba($color-2-primary, $alpha: .8);
@@ -15,10 +16,8 @@
     }
 
     .col-left h1 {
-        padding-left: 22px;
-        padding-top: 9px;
         color: $black-primary-color;
-        font-size: 64px;
+        font-size: 45px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -50,13 +49,13 @@
     .col-right {
         position: relative;
         text-align: right;
-        padding: 40px 44px;
     }
 
     .col-right img {
+        padding: 10px;
         background-color: #FFF;
         border-radius: 9px;
-        padding: 9px 30px;
+        border: 3px solid $color-2-primary;
     }
 
     .col-right p {

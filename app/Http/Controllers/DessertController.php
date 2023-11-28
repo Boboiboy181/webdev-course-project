@@ -20,6 +20,13 @@ class DessertController extends Controller
         return view('menu.dessert', ['desserts' => $desserts]);
     }
 
+    public function show(string $dessert): \Illuminate\Http\JsonResponse
+    {
+        $content = view('menu.product-detail', ['item' => $this->dessert::query()->find($dessert)]);
+
+        return response()->json(['content' => $content->render()]);
+    }
+
     public function store(): \Illuminate\Http\RedirectResponse
     {
         Dessert::query()->create([

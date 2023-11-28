@@ -1,73 +1,78 @@
 footer {
-    width: 100%;
+    width: 100vw;
     background-color: #FFE2E3;
 }
-.footer-content{
+
+.footer-content {
     width: 50%;
 }
-.footer-container{
+
+.footer-container {
     display: flex;
     justify-content: space-between;
 }
 
-.logo{
+.logo {
     width: 118px;
     height: 93px;
 }
 
-.footer-content-right{
+.footer-content-right {
     width: 100%;
 }
 
-.footer-content-right td{
+.footer-content-right td {
     font-size: 20px;
     line-height: 200%;
 }
 
-.footer-logo{
+.footer-logo {
     padding: 3% 5% 5%;
 }
 
-.footer-content{
+.footer-content {
     padding: 2% 15% 5% 5%;
 }
+
 .ft-menu {
-    .socialmedia{
-    width: 25px;
-    height: 25px;
+    .socialmedia {
+        width: 25px;
+        height: 25px;
     }
-    #youtube{
-        width:28px;
-        height:21px;
+
+    #youtube {
+        width: 28px;
+        height: 21px;
     }
 }
-.ft-list a{
+
+.ft-list a {
     text-decoration: none;
     color: black;
 }
 
-.footer-bottom ul{
+.footer-bottom ul {
     display: flex;
     width: 100%;
 }
 
-.footer-bottom li{
+.footer-bottom li {
     list-style-type: none;
 }
 
-.footer-bottom-main{
+.footer-bottom-main {
     padding-right: 1%;
-    font-weight: 700 ;
+    font-weight: 700;
 }
 
-.footer-bottom-content{
+.footer-bottom-content {
     padding-right: 7%;
 }
 
-.footer-bottom-right{
+.footer-bottom-right {
     padding-left: 32%;
 }
 
-.footer-bottom li{
+.footer-bottom li {
     padding-bottom: 1%;
 }

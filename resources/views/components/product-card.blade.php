@@ -1,28 +1,35 @@
-@props(['id', 'category', 'imgURL', 'name', 'price', 'size'])
+@props(['category', 'item'])
 
 <div class="{{ $category }}-item">
     <div class="{{ $category }}-img">
         <img
             data-bs-toggle="modal"
             data-bs-target="#staticBackdrop"
-            data-bs-details="{{ json_encode(['id' => $id, 'category' => $category]) }}"
-            src="{{ url($imgURL) }}" alt="{{$name}}"
+            @if(isset($item->_id))
+                data-bs-details="{{ json_encode(['id' => $item->_id, 'category' => $category]) }}"
+            @endif
+            @if(isset($item->imgURL))
+                src="{{ url($item->imgURL) }}" alt="{{$item->name}}"
+            @endif
         >
     </div>
     <div class="{{ $category }}-detail">
         <a
             data-bs-toggle="modal"
             data-bs-target="#staticBackdrop"
-            data-bs-details="{{ json_encode(['id' => $id, 'category' => $category]) }}"
+            @if(isset($item->_id))
+                data-bs-details="{{ json_encode(['id' => $item->_id, 'category' => $category]) }}"
+            @endif
             class="{{ $category }}-name"
         >
-            {{ $name }}
+            {{ $item->name }}
         </a>
         <p class="{{ $category }}-option">
-            @if(isset($size) || $category == 'pizza')
-                <span class="size">{{ $size ? $size : 'Medium' }}</span> - <br>
+            @if(isset($item->size) || $category == 'pizza')
+                <span class="size">{{ $item->size ? $item->size : 'Medium' }}</span> - <br>
             @endif
-            <span class="price">{{ $price }} VNĐ</span>
+            <span class="price">{{ $item->price }} VNĐ</span>
         </p>
     </div>
 </div>
+

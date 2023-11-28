@@ -20,6 +20,13 @@ class DrinkController extends Controller
         return view('menu.drink', ['drinks' => $drinks]);
     }
 
+    public function show(string $drink): \Illuminate\Http\JsonResponse
+    {
+        $content = view('menu.product-detail', ['item' => $this->drink::query()->find($drink)]);
+
+        return response()->json(['content' => $content->render()]);
+    }
+
     public function store(): \Illuminate\Http\RedirectResponse
     {
         Drink::query()->create([

@@ -5,9 +5,7 @@
         @foreach($desserts as $key => $value)
             <x-product-card
                 :category="'dessert'"
-                :name="$value['name']"
-                :imgURL="$value['imgURL']"
-                :price="$value['price']"
+                :item="$value"
             />
         @endforeach
     </div>

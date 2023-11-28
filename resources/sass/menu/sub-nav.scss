@@ -1,13 +1,13 @@
 .sub-nav {
     &-container {
         background-color: $white-primary-color;
-        //margin-top: 20px;
         padding: 20px;
         border: 2px solid $color-4-primary;
         border-radius: 15px;
         position: relative;
         margin: 20px auto 0;
-        width: 95%;
+        width: 95vw;
+        transition: all 0.2s ease-in-out;
     }
 
     &-list {
