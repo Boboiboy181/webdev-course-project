@@ -2,6 +2,8 @@
     padding: 18px 50px;
     font-size: 1.6rem !important;
     width: 100vw;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
 
     .navbar-brand {
         margin-right: 32px;
@@ -24,4 +26,14 @@
         align-items: center;
         justify-content: space-between;
     }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
