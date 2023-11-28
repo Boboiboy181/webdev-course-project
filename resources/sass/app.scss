@@ -1,6 +1,9 @@
 // Variables
 @import 'variables';
 
+// Mixins
+@import 'mixins';
+
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
 
@@ -9,17 +12,17 @@
 
 @import 'header.scss';
 @import 'footer.scss';
-@import 'booking.scss';
-@import './home/banner.scss';
-@import './home/products.scss';
+@import './home/booking';
+@import './home/banner';
+@import './home/products';
 
 // Menu
-@import './menu/combo.scss';
-@import './menu/pizza.scss';
-@import './menu/dessert.scss';
-@import './menu/drink.scss';
-@import './menu/side.scss';
-@import './menu/sub-nav.scss';
+@import './menu/combo';
+@import './menu/pizza';
+@import './menu/dessert';
+@import './menu/drink';
+@import './menu/side';
+@import './menu/sub-nav';
 
 html {
     font-size: 62.5%;
@@ -31,11 +34,4 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $body-bg;
-}
-
-.background-linear {
-    width: 100vw;
-    background: linear-gradient(160deg, $brown-primary-color 60%, $orange-primary-color 100%) no-repeat;
-    background-size: cover;
 }
