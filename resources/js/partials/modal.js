@@ -1,5 +1,5 @@
 // TODO: Code your modal here
-const modal = () => {
+export const modal = () => {
   // code goes here
 }
 

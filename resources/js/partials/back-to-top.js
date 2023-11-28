@@ -1,4 +1,4 @@
 // TODO: Code your back-to-top button here
-const backToTop = () => {
+export const backToTop = () => {
   // code goes here
 }
