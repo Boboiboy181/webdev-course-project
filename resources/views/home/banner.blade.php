@@ -6,7 +6,8 @@
         <div class="dot"></div>
         <div class="dot"></div>
     </div> -->
-    <div id="carouselExampleIndicators" style=" max-width: 1040px; max-height: 585px" class="carousel slide">
+    <div id="carouselExampleIndicators" style=" max-width: 1040px; max-height: 585px" 
+    class="carousel slide" data-bs-ride="carousel" data-bs-interval="1800">
         <!-- Phần các chỉ số -->
         <div class=" dots-container carousel-indicators">
             <button   type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class=" dot active" aria-current="true" aria-label="Slide 1"></button>
