@@ -6,19 +6,18 @@
 }
 
 .combo-item {
+    padding: 40px;
     border-radius: 15px;
-    border: 2px solid $orange-sub-color;
-    box-shadow: 2px 2px 3px 2px rgba($orange-sub-color, $alpha: .8);
+    border: 2px solid $color-2-primary;
+    box-shadow: 2px 2px 3px 2px rgba($color-2-primary, $alpha: .8);
 
     .col-left {
         position: relative;
     }
 
     .col-left h1 {
-        padding-left: 22px;
-        padding-top: 9px;
-        color: #FFF;
-        font-size: 64px;
+        color: $black-primary-color;
+        font-size: 45px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -42,7 +41,7 @@
         height: 60px;
         flex-shrink: 0;
         border-radius: 5px;
-        background: $orange-sub-color;
+        background: $color-2-primary;
         padding: 15px 58px;
         margin: 10px 0;
     }
@@ -50,17 +49,17 @@
     .col-right {
         position: relative;
         text-align: right;
-        padding: 40px 44px;
     }
 
     .col-right img {
+        padding: 10px;
         background-color: #FFF;
         border-radius: 9px;
-        padding: 9px 30px;
+        border: 3px solid $color-2-primary;
     }
 
     .col-right p {
-        color: #FFF;
+        color: $black-primary-color;
         text-align: right;
         font-size: 24px;
         font-style: normal;

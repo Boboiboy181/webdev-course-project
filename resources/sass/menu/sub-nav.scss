@@ -1,36 +1,39 @@
 .sub-nav {
     &-container {
-        width: 100vw;
         background-color: $white-primary-color;
-        margin-top: 20px;
-        padding: 20px 0;
+        padding: 20px;
+        border: 2px solid $color-4-primary;
+        border-radius: 15px;
+        position: relative;
+        margin: 20px auto 0;
+        width: 95vw;
+        transition: all 0.2s ease-in-out;
     }
 
     &-list {
-        width: 100vw;
-        margin: 0;
         list-style: none;
         padding: unset;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        margin: 0 75px 0;
 
         li {
             cursor: pointer;
 
             a {
                 text-decoration: none;
-                color: $black-primary-color;
+                color: $color-2-primary;
                 font-size: 2rem;
                 font-weight: 700;
 
                 &:hover {
-                    color: $orange-primary-color;
+                    color: $color-3-primary;
                 }
 
                 &.active {
-                    color: $orange-primary-color;
-                    text-decoration: $orange-primary-color underline;
+                    color: $color-3-primary;
+                    text-decoration: $color-3-primary underline;
                 }
             }
 
@@ -39,7 +42,7 @@
 
     &-option {
         margin: 15px 40px 0;
-        border-top: 1px solid $black-primary-color;
+        border-top: 2px solid $color-2-primary;
         padding-top: 20px;
 
         &.none {
@@ -48,13 +51,12 @@
 
         ul {
             border-radius: 33px;
-            border: 1px solid $black-primary-color;
             display: flex;
             list-style: none;
             align-items: center;
             justify-content: space-between;
             margin: unset;
-            padding: 15px 20px;
+            padding: 15px 0;
 
             li {
                 a {
@@ -62,24 +64,25 @@
                     font-size: 1.6rem;
                     font-weight: 700;
                     padding: 5px 50px;
-                    border: 1px solid $orange-primary-color;
+                    border: 2px solid $color-2-primary;
                     border-radius: 39px;
                     cursor: pointer;
-                    transition: all 0.3s ease-in-out;
+                    transition: all 0.2s ease-in-out;
+                    text-decoration: none;
+                    color: $black-primary-color;
 
                     &:hover {
-                        background-color: $orange-primary-color;
+                        background-color: $color-3-primary;
                         color: $white-primary-color !important;
-                        box-shadow: 0 0 5px 2px rgba($black-primary-color, 0.2);
                     }
 
                     &:active {
                         transform: scale(0.9) !important;
-                        box-shadow: 0 0 5px 1px rgba($black-primary-color, 0.2);
                     }
 
                     &.active {
-                        background-color: $orange-primary-color;
+                        text-decoration: none;
+                        background-color: $color-3-primary;
                         color: $white-primary-color !important;
                     }
                 }

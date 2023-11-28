@@ -1,0 +1,78 @@
+.background {
+    height: 300px;
+    flex-shrink: 0;
+    background-image: url('/assets/Banner(1).png');
+    position: relative;
+}
+
+.option-btn {
+    margin-top: 45px;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 8px 45px;
+    border-radius: 10px 10px 0 0;
+    border-top: 2px solid #FF9EA2;
+    border-right: 2px solid #FF9EA2;
+    border-left: 2px solid #FF9EA2;
+    border-bottom: unset;
+    background: rgba(255, 158, 162, 0.60);
+}
+
+.options .delivery {
+    margin-right: 48px;
+    margin-left: 300px;
+}
+
+.search-container {
+    width: 75%;
+    height: 150px;
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: #FF9EA2;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    padding-right: 10px;
+}
+
+.search-container input {
+    padding: 16px 0 15px 14px;
+    color: #A1A1A1;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 790.521px;
+    height: 53px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-color: white;
+    border-style: unset;
+    outline: none;
+}
+
+.search-container button {
+    width: 51.166px;
+    height: 54px;
+    flex-shrink: 0;
+    color: white;
+    background-color: $red-primary-color;
+    border-radius: 10px;
+    border-style: none;
+    outline: none;
+    position: absolute;
+    right: 45px;
+}
+
+.option-btn:hover {
+    color: #E4002B;
+    border-style: none;
+    background-color: white;
+}
