@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DessertController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +25,3 @@ Route::get('/', function () {
 Route::get('/menu/combos', function () {
     return view('menu.combo');
 })->name('pizza.combos');
-

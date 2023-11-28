@@ -15,13 +15,14 @@ class DrinkController extends Controller
 
     public function index()
     {
-    $drinks = Drink::all();
-    return view('menu.drink', ['drinks' => $drinks]);
+        $drinks = Drink::all();
+
+        return view('menu.drink', ['drinks' => $drinks]);
     }
 
     public function store(): \Illuminate\Http\RedirectResponse
     {
-        Pizza::query()->create([
+        Drink::query()->create([
             'name' => request('name'),
             'price' => request('price'),
             'imgURL' => request('imgURL'),

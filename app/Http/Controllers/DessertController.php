@@ -15,8 +15,9 @@ class DessertController extends Controller
 
     public function index()
     {
-    $desserts = Dessert::all();
-    return view('menu.dessert', ['desserts' => $desserts]);
+        $desserts = Dessert::all();
+
+        return view('menu.dessert', ['desserts' => $desserts]);
     }
 
     public function store(): \Illuminate\Http\RedirectResponse
@@ -27,6 +28,7 @@ class DessertController extends Controller
             'price' => request('price'),
             'desc' => request('desc'),
         ]);
+
         return redirect()->route('desserts.index');
     }
 }

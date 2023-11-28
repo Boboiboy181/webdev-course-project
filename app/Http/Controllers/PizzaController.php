@@ -16,6 +16,7 @@ class PizzaController extends Controller
     public function index(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         $filterType = request('tag');
+
         return view('menu.pizza', ['pizzas' => $this->pizza->getPizzas($filterType)]);
     }
 
