@@ -31,6 +31,9 @@
 // Auth
 @import './auth/auth';
 
+// Checkout
+@import './checkout/index';
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;

@@ -1,9 +1,9 @@
-<section class="myheader {{request()->is('menu*')}}">
+<section class="myheader {{ request()->is('menu*') }}">
     <div class="nav-container row">
         {{-- Start Right Nav --}}
         <div class="col-10">
             <ul class="nav justify-content-left">
-                <li><a class="navbar-brand" href="{{route('pizza.home')}}">
+                <li><a class="navbar-brand" href="{{ route('pizza.home') }}">
                         <img src="{{ url('/assets/Logo.png') }}" alt="Logo" width="50" height="32"
                              class="d-inline-block">
                     </a></li>
@@ -11,7 +11,7 @@
                     <a class="nav-link text-black" href="#">PROMOTION</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-black" href="{{route('pizzas.index')}}">MENU</a>
+                    <a class="nav-link text-black" href="{{ route('pizzas.index') }}">MENU</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-black" href="#">STORES</a>
@@ -27,11 +27,8 @@
                     <a href="#">MENU <br> TRACKING</a>
                 </div>
                 <div>
-                    <a class="icon-link text-black"
-                       data-bs-toggle="modal"
-                       data-bs-target="#staticBackdrop"
-                       data-bs-details="{{ json_encode(['id' => '1', 'category' => 'auth']) }}"
-                    >
+                    <a class="icon-link text-black" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                       data-bs-details="{{ json_encode(['id' => '1', 'category' => 'auth']) }}">
                         <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -44,7 +41,7 @@
                     </a>
                 </div>
                 <div>
-                    <a class="position-relative">
+                    <a class="position-relative" href="{{ route('pizzas.cart') }}">
                         <svg width="32" height="30" viewBox="0 0 32 30" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <path

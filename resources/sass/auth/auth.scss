@@ -1,9 +1,12 @@
+@import './sign-in';
+@import './sign-up';
+
 .auth {
     &-container {
         background-color: white;
         color: black;
         border-radius: 10px;
-        padding: 20px;
+        padding: 25px;
     }
 
     &-img {
@@ -28,6 +31,12 @@
         p {
             font-size: 20px;
             font-weight: bold;
+            cursor: default;
+            transition: all 0.3s ease-in-out;
+        }
+
+        :hover {
+            color: rgba($color: $color-3-primary, $alpha: 1.0);
         }
 
         .active {

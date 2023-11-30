@@ -1,6 +1,8 @@
 footer {
     width: 100vw;
-    background-color: #FFE2E3;
+    color: $color-1-primary;
+    border-top: 2px solid $color-1-primary;
+    border-bottom: 2px solid $color-1-primary;
 }
 
 .footer-content {
@@ -48,7 +50,8 @@ footer {
 
 .ft-list a {
     text-decoration: none;
-    color: black;
+    font-weight: 600;
+    color: $color-1-primary;
 }
 
 .footer-bottom ul {

@@ -1,3 +1,5 @@
 <div class="signin-container">
-    <p>This is sign-in</p>
+    <x-input label="Email" name="email" type="text" />
+    <x-input label="Password" name="password" type="password" />
+    <button class="btn btn--primary">Sign In</button>
 </div>
