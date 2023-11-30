@@ -17,6 +17,7 @@ Route::resource('/menu/pizzas', \App\Http\Controllers\PizzaController::class);
 Route::resource('/menu/sides', \App\Http\Controllers\SideController::class);
 Route::resource('/menu/drinks', \App\Http\Controllers\DrinkController::class);
 Route::resource('/menu/desserts', \App\Http\Controllers\DessertController::class);
+Route::resource('/auth', \App\Http\Controllers\AuthController::class);
 
 Route::get('/', function () {
     return view('home.home');

@@ -19,6 +19,7 @@
     @if (!request()->is('menu*'))
         @include('footer')
     @endif
+    <x-modal/>
 </main>
 </body>
 </html>

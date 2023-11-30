@@ -27,7 +27,11 @@
                     <a href="#">MENU <br> TRACKING</a>
                 </div>
                 <div>
-                    <a class="icon-link text-black" href="#">
+                    <a class="icon-link text-black"
+                       data-bs-toggle="modal"
+                       data-bs-target="#staticBackdrop"
+                       data-bs-details="{{ json_encode(['id' => '1', 'category' => 'auth']) }}"
+                    >
                         <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <path

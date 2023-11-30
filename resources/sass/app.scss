@@ -28,6 +28,9 @@
 @import './menu/sub-nav';
 @import './menu/product-detail';
 
+// Auth
+@import './auth/auth';
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
