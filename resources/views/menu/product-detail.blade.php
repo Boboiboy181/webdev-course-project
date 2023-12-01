@@ -11,7 +11,7 @@
                     <p>Base</p>
                     <div class="form-check form-check-custom">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
-                            checked>
+                               checked>
                         <label class="form-check-label" for="flexRadioDefault1">
                             Thin and Crispy
                         </label>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="form-check form-check-custom">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-                            checked>
+                               checked>
                         <label class="form-check-label" for="flexRadioDefault2">
                             12 inches = 294.000đ
                         </label>
@@ -50,7 +50,7 @@
                 <p>More options:</p>
                 <div class="form-check form-check-custom">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
-                        checked>
+                           checked>
                     <label class="form-check-label" for="flexRadioDefault1">
                         9” cheese = 24,500đ
                     </label>
@@ -75,7 +75,7 @@
                     -
                 </button>
                 <label>
-                    <input type="text" class="modal-quantity" value="1">
+                    <input type="number" class="modal-quantity" value="1" min="1">
                 </label>
                 <button type="button" class="btn btn-secondary btn-secondary-custom modal-btn_increase">
                     +

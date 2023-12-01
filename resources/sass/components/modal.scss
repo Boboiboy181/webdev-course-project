@@ -72,6 +72,9 @@
             text-align: center;
             outline: none;
             font-weight: 500;
+            -webkit-appearance: none;
+            -moz-appearance: textfield;
+            margin: 0;
         }
 
         &-add {

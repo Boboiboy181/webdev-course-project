@@ -5,10 +5,11 @@ import "../sass/app.scss";
 import * as bootstrap from "bootstrap";
 
 import "./auth.js";
+import "./cart.js";
 
-import { backToTop } from "./partials/back-to-top";
-import { sticky } from "./partials/sticky";
-import { modal } from "./partials/modal";
+import {backToTop} from "./partials/back-to-top";
+import {sticky} from "./partials/sticky";
+import {modal} from "./partials/modal";
 
 backToTop();
 sticky();
