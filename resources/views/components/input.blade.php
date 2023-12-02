@@ -2,5 +2,5 @@
 
 <div class="input-container">
     <label for="{{ $name }}">{{ $label }}</label>
-    <input name="{{ $name }}" type="{{ $type }}">
+    <input id="{{ $name }}" name="{{ $name }}" type="{{ $type }}">
 </div>

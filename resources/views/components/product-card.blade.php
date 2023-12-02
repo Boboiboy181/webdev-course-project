@@ -28,7 +28,7 @@
             @if(isset($item->size) || $category == 'pizza')
                 <span class="size">{{ $item->size ? $item->size : 'Medium' }}</span> - <br>
             @endif
-            <span class="price">{{ $item->price }} VNĐ</span>
+            <span class="price">{{ number_format($item->price, 0, ',', ',') }} VNĐ</span>
         </p>
     </div>
 </div>

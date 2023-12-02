@@ -15,8 +15,11 @@ footer {
 }
 
 .logo {
-    width: 118px;
-    height: 93px;
+    width: 150px;
+    mix-blend-mode: multiply;
+    display: inline-block;
+    background-color: $color-1-primary;
+    border-radius: 25px;
 }
 
 .footer-content-right {
@@ -61,6 +64,7 @@ footer {
 
 .footer-bottom li {
     list-style-type: none;
+    font-size: 1.6rem;
 }
 
 .footer-bottom-main {

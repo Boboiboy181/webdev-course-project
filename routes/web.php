@@ -28,6 +28,6 @@ Route::get('/menu/combos', function () {
     return view('menu.combo');
 })->name('pizza.combos');
 
-Route::get('/cart', function () {
-    return view('checkout.cart.cart');
-})->name('pizzas.cart');
+//Route::get('/cart', function () {
+//    return view('checkout.cart.cart');
+//})->name('pizzas.cart');

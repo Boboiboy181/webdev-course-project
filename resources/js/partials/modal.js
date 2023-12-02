@@ -12,7 +12,11 @@ export const modal = () => {
                 );
                 const {content} = await response.json();
                 modalBody.innerHTML = content;
-                sessionStorage.setItem("item", JSON.stringify(details.item));
+                const item = {
+                    category: details.category,
+                    info: details.item
+                }
+                sessionStorage.setItem("item", JSON.stringify({item}));
             } catch (error) {
                 console.error("Error fetching modal content:", error);
             }
