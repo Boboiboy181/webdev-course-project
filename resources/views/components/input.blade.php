@@ -1,4 +1,4 @@
-@props(['label', 'name', 'type' , 'placeholder' => 'Enter your password ...' ])
+@props(['label', 'name', 'type' , 'placeholder' => '{$text}' ])
 
 <div class="input-container">
     <label for="{{ $name }}">{{ $label }}</label>

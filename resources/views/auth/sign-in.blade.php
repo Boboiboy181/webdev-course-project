@@ -2,7 +2,7 @@
     <x-input label="Email/Username" name="email" type="text" placeholder="Enter your email/username..." />
 
     
-    <x-input label="Password" name="password" type="password" />
+    <x-input label="Password" name="password" type="password" placeholder="Enter your password..."/>
     
     <button class="btn btn--primary">LOG IN</button>
 </div>
