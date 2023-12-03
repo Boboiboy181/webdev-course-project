@@ -16,16 +16,26 @@ myModal.addEventListener("shown.bs.modal", async function () {
     const decreaseBtn = document.querySelector('.modal-btn_decrease');
     const quantity = document.querySelector('.modal-quantity');
     const addToCartBtn = document.querySelector('.modal-btn-add')
-    const options = document.querySelectorAll('.form-check-input');
-    const sizeCheckBox = document.querySelectorAll('input[name="size"]');
-    const crustCheckBox = document.querySelectorAll('input[name="crust"]')
-    const cheeseCheckbox = document.querySelectorAll('input[name="extras"]')
-    const previewPrice = document.querySelector('.modal-btn-add span')
     const toast = document.getElementById('toastNotify')
     const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toast)
     const item = JSON.parse(sessionStorage.getItem("item")).item;
+    const previewPrice = document.querySelector('.modal-btn-add span')
 
-    let sizeValue, cheeseValue, crust, price;
+    let options, sizeCheckBox, crustCheckBox, cheeseCheckbox, sizeValue, cheeseValue, crustValue, price;
+
+    const getPrice = (size, cheese) => {
+        let sizePrice, cheesePrice
+        if (size === '7 inches') sizePrice = item.info.price * 0.8
+        else if (size === '9 inches') sizePrice = item.info.price;
+        else sizePrice = item.info.price * 1.2;
+
+        if (!cheese) return sizePrice;
+        if (cheese === '9” cheese') cheesePrice = 24500;
+        else if (cheese === 'Double 9” cheese') cheesePrice = 44500;
+        else cheesePrice = 64000
+
+        return sizePrice + cheesePrice;
+    }
 
     const getSelectedValue = (options) => {
         let value;
@@ -37,27 +47,40 @@ myModal.addEventListener("shown.bs.modal", async function () {
         return value;
     }
 
-    options.forEach((option) => {
-        option.addEventListener('click', () => {
-            sizeValue = getSelectedValue(sizeCheckBox);
-            cheeseValue = getSelectedValue(cheeseCheckbox);
-            crust = getSelectedValue(crustCheckBox);
+    const checkCategory = () => {
+        if (item.category === 'pizza') {
+            options = document.querySelectorAll('.form-check-input');
+            sizeCheckBox = document.querySelectorAll('input[name="size"]');
+            crustCheckBox = document.querySelectorAll('input[name="crust"]')
+            cheeseCheckbox = document.querySelectorAll('input[name="extras"]')
 
-            let sizePrice, cheesePrice
+            sizeValue = document.querySelector('input[name="size"]:checked').value;
+            crustValue = document.querySelector('input[name="crust"]:checked').value;
 
-            if (sizeValue === '7 inches') sizePrice = item.info.price * 0.8
-            else if (sizeValue === '9 inches') sizePrice = item.info.price;
-            else sizePrice = item.info.price * 1.2;
+            if (document.querySelector('input[name="extras"]:checked')) {
+                cheeseValue = document.querySelector('input[name="extras"]:checked').value
+            } else cheeseValue = 0
 
-            if (cheeseValue === '9” cheese') cheesePrice = 24500;
-            else if (cheeseValue === 'Double 9” cheese') cheesePrice = 44500;
-            else cheesePrice = 64000
+            price = getPrice(sizeValue, cheeseValue);
 
-            price = sizePrice + cheesePrice;
+            return 1;
+        } else
+            return 0;
+    }
 
-            previewPrice.innerHTML = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    if (checkCategory()) {
+        options.forEach((option) => {
+            option.addEventListener('click', () => {
+                sizeValue = getSelectedValue(sizeCheckBox);
+                cheeseValue = getSelectedValue(cheeseCheckbox);
+                crustValue = getSelectedValue(crustCheckBox);
+
+                price = getPrice(sizeValue, cheeseValue);
+
+                previewPrice.innerHTML = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            })
         })
-    })
+    }
 
 
     let totalCartValue = 1;
@@ -81,8 +104,6 @@ myModal.addEventListener("shown.bs.modal", async function () {
     };
 
     const addToCart = () => {
-        const existingCartItem = cartItems.find(cartItem => cartItem._id === item.info._id);
-
         const newItem = {
             ...item.info,
             quantity: Number(quantity.value)
@@ -90,10 +111,12 @@ myModal.addEventListener("shown.bs.modal", async function () {
 
         if (item.category === 'pizza') {
             newItem.price = price;
-            newItem.crust = crust;
+            newItem.crust = crustValue;
             newItem.size = sizeValue;
             newItem.cheese = cheeseValue;
         }
+
+        const existingCartItem = cartItems.find(cartItem => cartItem._id === newItem._id);
 
         if (!existingCartItem) {
             return [...cartItems, newItem];
@@ -104,18 +127,24 @@ myModal.addEventListener("shown.bs.modal", async function () {
         }
     };
 
-
     addToCartBtn.addEventListener('click', () => {
         localStorage.setItem('cartItems', JSON.stringify(addToCart()))
         render();
         toastBootstrap.show();
+        document.cookie = `cartItems=${localStorage.getItem('cartItems')}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/;SameSite=None;Secure`;
     })
 
+    checkCategory();
     increaseQuantity();
     decreaseQuantity();
 });
 
 render();
 
-const cartIcon = document.querySelector('.cart-icon')
+
+
+
+
+
+
 

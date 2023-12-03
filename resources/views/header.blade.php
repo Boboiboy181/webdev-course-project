@@ -41,7 +41,7 @@
                     </a>
                 </div>
                 <div>
-                    <a class="position-relative cart-icon">
+                    <a class="position-relative cart-icon" href="/cart">
                         <svg width="32" height="30" viewBox="0 0 32 30" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <path

@@ -34,7 +34,7 @@
                     <p>Size</p>
                     <div class="form-check form-check-custom">
                         <label for="7inches"></label><input class="form-check-input" type="radio" name="size"
-                                                            id="7inches" checked
+                                                            id="7inches"
                                                             value="7 inches">
                         <label class="form-check-label" for="7inches">
                             7 inches = {{number_format($item->price * 0.8, 0, ',', ',')}}đ
@@ -60,7 +60,14 @@
             <div class="product-detail-footer">
                 <p>More options:</p>
                 <div class="form-check form-check-custom">
-                    <input class="form-check-input" type="radio" name="extras" id="9inches-cheese" checked
+                    <input class="form-check-input" type="radio" name="extras" id="no-extras"
+                           value="No extras cheese" checked>
+                    <label class="form-check-label" for="no-extras">
+                        None
+                    </label>
+                </div>
+                <div class="form-check form-check-custom">
+                    <input class="form-check-input" type="radio" name="extras" id="9inches-cheese"
                            value="9” cheese">
                     <label class="form-check-label" for="9inches-cheese">
                         9” cheese = 24,500đ
