@@ -19,6 +19,7 @@ Route::resource('/menu/drinks', \App\Http\Controllers\DrinkController::class);
 Route::resource('/menu/desserts', \App\Http\Controllers\DessertController::class);
 Route::resource('/auth', \App\Http\Controllers\AuthController::class);
 Route::resource('/cart', \App\Http\Controllers\CheckoutController::class);
+Route::resource('/add', \App\Http\Controllers\AddressController::class);
 
 Route::get('/', function () {
     return view('home.home');

@@ -5,19 +5,31 @@ export const modal = () => {
         const button = event.relatedTarget;
         const details = JSON.parse(button.dataset.bsDetails);
         const modalBody = document.getElementsByClassName("modal-body")[0];
-        if (details.category !== "auth") {
+        if (details.category === "auth") {
+            try {
+                const response = await fetch("/auth");
+                const { content } = await response.json();
+                modalBody.innerHTML = content;
+                // console.log('auth');
+            } catch (error) {
+                console.error("Error fetching modal content:", error);
+            }
+        } 
+        else if (details.category === "address" )  {
+            try {
+                const response = await fetch("/add");
+                const { content } = await response.json();
+                modalBody.innerHTML = content;
+                // console.log('add');
+            } catch (error) {
+                console.error("Error fetching modal content:", error);
+            }
+        }
+        else if (details.category !== "auth")  {
             try {
                 const response = await fetch(
                     `${details.category}s/${details.id}`
                 );
-                const { content } = await response.json();
-                modalBody.innerHTML = content;
-            } catch (error) {
-                console.error("Error fetching modal content:", error);
-            }
-        } else {
-            try {
-                const response = await fetch("/auth");
                 const { content } = await response.json();
                 modalBody.innerHTML = content;
             } catch (error) {

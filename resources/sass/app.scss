@@ -34,6 +34,8 @@
 // Checkout
 @import './checkout/index';
 
+@import './checkout/cart/address.scss';
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
