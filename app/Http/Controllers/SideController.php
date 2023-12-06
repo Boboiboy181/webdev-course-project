@@ -2,22 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Side;
+use App\Helpers\Helper;
+use App\Models\Product;
 
 class SideController extends Controller
 {
-    private Side $side;
+    private Product $side;
 
     public function __construct()
     {
-        $this->side = new Side();
+        $this->side = new Product();
     }
 
     public function index(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         $filterType = request('tag');
 
-        return view('menu.side', ['sides' => $this->side->getSides($filterType)]);
+        if ($filterType) {
+            $data = $this->side->query()->where('category', 'side')->where('toppingType', $filterType)->get();
+            $sides = Helper::convertToCategory($data, 'sideCategory');
+        } else {
+            $sides = Helper::convertToCategory($this->side->query()->where('category', 'side')->get(), 'sideCategory');
+        }
+
+        return view('menu.side', ['sides' => $sides]);
     }
 
     public function show(string $side): \Illuminate\Http\JsonResponse
@@ -29,7 +37,7 @@ class SideController extends Controller
 
     public function store(): \Illuminate\Http\RedirectResponse
     {
-        Side::query()->create([
+        Product::query()->create([
             'name' => request('name'),
             'imgURL' => request('imgURL'),
             'price' => request('price'),

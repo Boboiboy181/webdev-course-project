@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Drink;
+use App\Models\Product;
 
 class DrinkController extends Controller
 {
-    private Drink $drink;
+    private Product $drink;
 
     public function __construct()
     {
-        $this->drink = new Drink();
+        $this->drink = new Product();
     }
 
     public function index()
     {
-        $drinks = Drink::all();
+        $drinks = Product::query()->where('category', 'drink')->get();
 
         return view('menu.drink', ['drinks' => $drinks]);
     }
@@ -29,7 +29,7 @@ class DrinkController extends Controller
 
     public function store(): \Illuminate\Http\RedirectResponse
     {
-        Drink::query()->create([
+        Product::query()->create([
             'name' => request('name'),
             'price' => request('price'),
             'imgURL' => request('imgURL'),

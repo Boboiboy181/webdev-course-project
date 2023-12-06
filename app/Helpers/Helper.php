@@ -4,11 +4,11 @@ namespace App\Helpers;
 
 class Helper
 {
-    public static function convertToCategory($data): array
+    public static function convertToCategory($data, $fieldToFilter): array
     {
         $dataModified = [];
         foreach ($data as $value) {
-            $category = $value['category'];
+            $category = $value[$fieldToFilter];
             if (! array_key_exists($category, $dataModified)) {
                 $dataModified[$category] = [];
             }
