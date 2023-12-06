@@ -1,21 +1,47 @@
 .address-container {
-    width: 707px;
+    width: 100%;
     height: 214px;
     flex-shrink: 0;
 }
 
 .addr-detail {
-    width: 560px;
-    height: 120px;
+    width: 90%;
+    height: 180px;
     flex-shrink: 0;
     border-radius: 10px;
     border: 2px solid #DC4D01;
+    padding-right: 20px;
+}
+
+p.name {
+    padding-top: 13px;
+    padding-left: 100px;
+    color: #000;
+    font-family: Quicksand;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+p.address {
+    padding-left: 100px;
+    color: #000;
+    font-family: Quicksand;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .delivery-opt-container {
-    width: 707px;
     height: 390px;
     flex-shrink: 0;
+    margin-top: 30px;
+    margin-bottom: 42px;
+    border-radius: 16px;
+    width: 100%;
+    padding: 20px 0px;
 }
 
 .row-opt {
@@ -24,4 +50,36 @@
     justify-content: space-between;
     gap: 20px;
     margin-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 30px;
+}
+
+.option-cell {
+    width: 280px;
+    height: 137px;
+    flex-shrink: 0;
+    padding: 14px 14px 11px;
+    min-height: 70px;
+    border-radius: 10px;
+    border: 2px solid #DC4D01;
+    box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+p.shipping {
+    color: #000;
+    text-align: right;
+    font-family: Quicksand;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.radio-btn {
+    width: 40px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-end;
+    width: fit-content;
 }
