@@ -1,18 +1,23 @@
+<p class="payment-title">Payment method</p>
 <div class="payment-option-list">
     <x-payment-option
         :imgURL="'https://img.dominos.vn/icon-payment-method-mo-mo.png'"
-        :method-name="'Ví MoMo'"
+        :methodName="'Ví MoMo'"
+        :value="'momo'"
     />
     <x-payment-option
         :imgURL="'https://img.dominos.vn/icon-payment-method-atm.png'"
-        :method-name="'ATM'"
+        :methodName="'ATM'"
+        :value="'atm'"
     />
     <x-payment-option
         :imgURL="'https://img.dominos.vn/icon-payment-method-credit.png'"
-        :method-name="'Thẻ tín dụng / ghi nợ'"
+        :methodName="'Thẻ tín dụng / ghi nợ'"
+        :value="'credit'"
     />
     <x-payment-option
         :imgURL="'https://img.dominos.vn/cash.png'"
-        :method-name="'Tiền mặt'"
+        :methodName="'Tiền mặt'"
+        :value="'cash'"
     />
 </div>

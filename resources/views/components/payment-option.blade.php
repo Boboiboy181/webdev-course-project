@@ -1,6 +1,9 @@
-@props(['imgURL', 'method-name'])
+@props(['imgURL', 'methodName', 'value'])
+
 <div class="payment-option-item">
-    <input type="radio" name="" id="">
-    <img src="{{$imgURL}}">
-    <p>{{$method-name}}</p>
-</div>
+    <div class="form-check form-check-custom">
+        <input class="form-check-input" type="radio" name="crust" id="payment-option" checked value="{{$value}}">
+    </div>
+            <img src="{{ $imgURL }}">
+            <p>{{ $methodName }}</p>
+    </div>

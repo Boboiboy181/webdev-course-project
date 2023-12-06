@@ -5,4 +5,4 @@
             <x-cart-item :item="$item"/>
         @endforeach
     </div>
-</div>
+</div>gi
