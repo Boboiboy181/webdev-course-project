@@ -12,4 +12,11 @@ class CheckoutController extends Controller
 
         return view('checkout.cart.cart', ['data' => json_decode($data)]);
     }
+
+    public function showPayment(Request $request)
+    {
+        $data = $request->cookie('cartItems');
+
+        return view('checkout.payment.payment', ['data' => json_decode($data)]);
+    }
 }

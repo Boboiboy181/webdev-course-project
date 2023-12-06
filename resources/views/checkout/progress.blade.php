@@ -1,15 +1,14 @@
 <div class="progress-container">
-    <div class="progress-item progress-active">
+    <div class="progress-item ">
+        <div class="progress-point progress-active"></div>
+        <div class="progress-line"></div>
         <div class="progress-point"></div>
+        <div class="progress-line"></div>
+        <div class="progress-point"></div>
+    </div>
+    <div class="progress-name">
         <p>cart</p>
-    </div>
-    <div class="progress-item">
-        <div class="progress-point"></div>
         <p>payment</p>
-    </div>
-    <div class="progress-item">
-        <div class="progress-point"></div>
         <p>confirmation</p>
     </div>
-    <div class="progress-line"></div>
 </div>

@@ -18,7 +18,9 @@ Route::resource('/menu/sides', \App\Http\Controllers\SideController::class);
 Route::resource('/menu/drinks', \App\Http\Controllers\DrinkController::class);
 Route::resource('/menu/desserts', \App\Http\Controllers\DessertController::class);
 Route::resource('/auth', \App\Http\Controllers\AuthController::class);
-Route::resource('/cart', \App\Http\Controllers\CheckoutController::class);
+
+Route::get('cart', [\App\Http\Controllers\CheckoutController::class, 'index'])->name('cart.index');
+Route::get('/cart/payment', [\App\Http\Controllers\CheckoutController::class, 'showPayment'])->name('cart.payment');
 
 Route::get('/', function () {
     return view('home.home');
@@ -27,7 +29,3 @@ Route::get('/', function () {
 Route::get('/menu/combos', function () {
     return view('menu.combo');
 })->name('pizza.combos');
-
-//Route::get('/cart', function () {
-//    return view('checkout.cart.cart');
-//})->name('pizzas.cart');
