@@ -13,7 +13,7 @@
                 </div>
                 <div class="shipping-info">
                     <p>xx xxx VND</p>
-                    <p>Priority Delivery</p>
+                    <p>Priority Deliver.y</p>
                 </div>
             </div>
         </div>
