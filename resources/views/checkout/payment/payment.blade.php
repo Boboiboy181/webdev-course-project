@@ -3,7 +3,9 @@
 @section('checkout-content')
     <div class="row cart-container">
         <div class="col-6 payment-left">
+            @include('checkout.payment.payment-left')
             @include('checkout.cart.cart-left', ['data' => $data])
+            @include('checkout.payment.payment-left-note')
         </div>
         <div class="col-6 payment-right">
             @include('checkout.payment.payment-right')

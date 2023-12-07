@@ -1,6 +1,6 @@
 <div class="progress-container">
-    <div class="progress-item ">
-        <div class="progress-point progress-active"></div>
+    <div class="progress-item">
+        <div class="progress-point"></div>
         <div class="progress-line"></div>
         <div class="progress-point"></div>
         <div class="progress-line"></div>

@@ -4,8 +4,7 @@
     gap: 35px;
     border: 2px solid $color-2-primary;
     border-radius: 10px;
-    padding: 5px;
-    padding-left: 20px;
+    padding: 5px 5px 5px 20px;
     margin-bottom: 15px;
 
     input {
@@ -25,7 +24,7 @@
         line-height: 50px;
     }
 
-    &:nth-child(4){
+    &:nth-child(4) {
         margin-bottom: 50px;
     }
 }
