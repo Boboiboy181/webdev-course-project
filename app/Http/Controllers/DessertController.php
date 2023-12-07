@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Dessert;
+use App\Models\Product;
 
 class DessertController extends Controller
 {
-    private Dessert $dessert;
+    private Product $dessert;
 
     public function __construct()
     {
-        $this->dessert = new Dessert();
+        $this->dessert = new Product();
     }
 
     public function index()
     {
-        $desserts = Dessert::all();
+        $desserts = Product::query()->where('category', 'dessert')->get();
 
         return view('menu.dessert', ['desserts' => $desserts]);
     }
@@ -29,7 +29,7 @@ class DessertController extends Controller
 
     public function store(): \Illuminate\Http\RedirectResponse
     {
-        Dessert::query()->create([
+        Product::query()->create([
             'name' => request('name'),
             'imgURL' => request('imgURL'),
             'price' => request('price'),

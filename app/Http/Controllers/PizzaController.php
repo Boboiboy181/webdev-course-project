@@ -2,22 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pizza;
+use App\Helpers\Helper;
+use App\Models\Product;
 
 class PizzaController extends Controller
 {
-    private Pizza $pizza;
+    private Product $pizza;
 
     public function __construct()
     {
-        $this->pizza = new Pizza();
+        $this->pizza = new Product();
     }
 
     public function index(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         $filterType = request('tag');
 
-        return view('menu.pizza', ['pizzas' => $this->pizza->getPizzas($filterType)]);
+        if ($filterType) {
+            $data = $this->pizza->query()->where('category', 'pizza')->where('toppingType', $filterType)->get();
+            $pizzas = Helper::convertToCategory($data, 'pizzaCategory');
+        } else {
+            $pizzas = Helper::convertToCategory($this->pizza->query()->where('category', 'pizza')->get(), 'pizzaCategory');
+        }
+
+        return view('menu.pizza', ['pizzas' => $pizzas]);
     }
 
     public function show(string $pizza): \Illuminate\Http\JsonResponse
@@ -29,7 +37,7 @@ class PizzaController extends Controller
 
     public function store(): \Illuminate\Http\RedirectResponse
     {
-        Pizza::query()->create([
+        Product::query()->create([
             'name' => request('name'),
             'desc' => request('desc'),
             'price' => request('price'),
