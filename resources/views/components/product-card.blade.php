@@ -6,7 +6,7 @@
             data-bs-toggle="modal"
             data-bs-target="#staticBackdrop"
             @if(isset($item->_id))
-                data-bs-details="{{ json_encode(['id' => $item->_id, 'category' => $category]) }}"
+                data-bs-details="{{ json_encode(['category' => $category, 'item' => $item]) }}"
             @endif
             @if(isset($item->imgURL))
                 src="{{ url($item->imgURL) }}" alt="{{$item->name}}"
@@ -18,7 +18,7 @@
             data-bs-toggle="modal"
             data-bs-target="#staticBackdrop"
             @if(isset($item->_id))
-                data-bs-details="{{ json_encode(['id' => $item->_id, 'category' => $category]) }}"
+                data-bs-details="{{ json_encode(['category' => $category, 'item' => $item]) }}"
             @endif
             class="{{ $category }}-name"
         >
@@ -28,7 +28,7 @@
             @if(isset($item->size) || $category == 'pizza')
                 <span class="size">{{ $item->size ? $item->size : 'Medium' }}</span> - <br>
             @endif
-            <span class="price">{{ $item->price }} VNĐ</span>
+            <span class="price">{{ number_format($item->price, 0, ',', ',') }} VNĐ</span>
         </p>
     </div>
 </div>

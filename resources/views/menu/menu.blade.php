@@ -5,4 +5,5 @@
     <div class="container">
         @yield('menu-content')
     </div>
+    <x-toast :message="'Add product succesfully 🤩'"/>
 @endsection

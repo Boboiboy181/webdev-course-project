@@ -1,7 +1,7 @@
 @mixin optionTextStyle() {
-    color: $black-primary-color;
-    font-size: 1.9rem;
+    font-size: 2.2rem;
     font-weight: 700;
+    color: white;
 }
 
 .product-detail {
@@ -34,12 +34,20 @@
         }
     }
 
+    &-desc {
+        color: white;
+    }
+
     &-body {
         border-top: 2px solid rgba(white, .5);
         border-bottom: 2px solid rgba(white, .5);
         display: flex;
         justify-content: space-between;
         padding: 10px 0;
+
+        label {
+            color: white;
+        }
 
         p {
             @include optionTextStyle();
@@ -49,6 +57,10 @@
     &-footer {
         border-bottom: 2px solid rgba(white, .5);
         padding: 10px 0;
+
+        label {
+            color: white;
+        }
 
         p {
             @include optionTextStyle();

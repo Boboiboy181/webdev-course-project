@@ -4,25 +4,25 @@ $todayHighlight = [
         'imgURL' => '/assets/Pizza_Extra_Topping.jpg',
         'name' => 'PIZZA SIÊU TOPPING HẢI SẢN XỐT MAYONNAISE - SUPER TOPPING OCEAN MANIA',
         'size' => 'Medium',
-        'price' => '235,000',
+        'price' => 235000,
     ],
     [
         'imgURL' => '/assets/Pizza_Extra_Topping.jpg',
         'name' => 'PIZZA SIÊU TOPPING HẢI SẢN XỐT MAYONNAISE - SUPER TOPPING OCEAN MANIA',
         'size' => 'Medium',
-        'price' => '235,000',
+        'price' => 235000,
     ],
     [
         'imgURL' => '/assets/Pizza_Extra_Topping.jpg',
         'name' => 'PIZZA SIÊU TOPPING HẢI SẢN XỐT MAYONNAISE - SUPER TOPPING OCEAN MANIA',
         'size' => 'Medium',
-        'price' => '235,000',
+        'price' => 235000,
     ],
     [
         'imgURL' => '/assets/Pizza_Extra_Topping.jpg',
         'name' => 'PIZZA SIÊU TOPPING HẢI SẢN XỐT MAYONNAISE - SUPER TOPPING OCEAN MANIA',
         'size' => 'Medium',
-        'price' => '235,000',
+        'price' => 235000,
     ],
 ];
 

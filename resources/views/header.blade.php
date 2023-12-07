@@ -41,7 +41,7 @@
                     </a>
                 </div>
                 <div>
-                    <a class="position-relative" href="{{ route('pizzas.cart') }}">
+                    <a class="position-relative cart-icon" href="/cart">
                         <svg width="32" height="30" viewBox="0 0 32 30" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -51,9 +51,9 @@
                                 d="M28.8335 8.99337H25.6618L22.9226 2.07334C22.3459 0.631662 20.6159 -0.0891751 19.1743 0.487494C17.7326 1.06416 17.0117 2.79417 17.5884 4.23584L19.4626 8.99337H12.2542L14.1284 4.23584C14.7051 2.79417 13.9842 1.06416 12.5426 0.487494C11.1009 -0.0891751 9.37088 0.631662 8.79421 2.07334L6.05503 8.99337H2.88335C1.29751 8.99337 0 10.2909 0 11.8767V13.3184C0 14.1834 0.576669 14.7601 1.44167 14.7601H30.2751C31.1401 14.7601 31.7168 14.1834 31.7168 13.3184V11.8767C31.7168 10.2909 30.4193 8.99337 28.8335 8.99337Z"
                                 fill="black"/>
                         </svg>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            3
-                            <span class="visually-hidden">unread messages</span>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger total-cart">
+                            0
                         </span>
                     </a>
                 </div>

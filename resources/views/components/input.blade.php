@@ -1,6 +1,8 @@
-@props(['label', 'name', 'type'])
+@props(['label', 'name', 'type' , 'placeholder' => '{$text}' ])
 
 <div class="input-container">
     <label for="{{ $name }}">{{ $label }}</label>
-    <input name="{{ $name }}" type="{{ $type }}">
+    <label>
+        <input name="{{ $name }}" type="{{ $type }} " placeholder="{{ $placeholder }}"/>
+    </label>
 </div>

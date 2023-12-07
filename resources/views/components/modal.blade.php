@@ -7,7 +7,7 @@
     aria-labelledby="staticBackdropLabel"
     aria-hidden="true"
 >
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content modal-content-custom">
             <div class="modal-header modal-header-custom">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

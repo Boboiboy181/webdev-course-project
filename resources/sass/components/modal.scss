@@ -1,9 +1,10 @@
 .modal {
+
     &-content-custom {
         border-radius: 10px;
         background-color: $color-5-primary;
         color: #fff;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -40,6 +41,7 @@
         padding: unset;
         margin-top: 20px;
         justify-content: space-between;
+        flex-direction: row;
     }
 
     &-btn {
@@ -72,6 +74,10 @@
             text-align: center;
             outline: none;
             font-weight: 500;
+            -webkit-appearance: textfield;
+            -moz-appearance: textfield;
+            appearance: textfield;
+            margin: 0;
         }
 
         &-add {
