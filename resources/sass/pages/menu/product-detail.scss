@@ -1,0 +1,73 @@
+@mixin optionTextStyle() {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.product-detail {
+    &-container {
+        color: black;
+        border-radius: 10px;
+        padding: 30px;
+    }
+
+    &-header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 20px;
+
+        img {
+            border-radius: 10px;
+            width: 200px;
+            border: 2px solid white;
+            background-color: white;
+        }
+
+        p {
+            color: #fff;
+            font-size: 2.2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+    &-desc {
+        color: white;
+    }
+
+    &-body {
+        border-top: 2px solid rgba(white, .5);
+        border-bottom: 2px solid rgba(white, .5);
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        label {
+            color: white;
+        }
+
+        p {
+            @include optionTextStyle();
+        }
+    }
+
+    &-footer {
+        border-bottom: 2px solid rgba(white, .5);
+        padding: 10px 0;
+
+        label {
+            color: white;
+        }
+
+        p {
+            @include optionTextStyle();
+        }
+    }
+}
+
+.none {
+    display: none;
+}

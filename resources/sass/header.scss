@@ -1,7 +1,7 @@
 .myheader {
     padding: 18px 50px;
     font-size: 1.6rem !important;
-    width: 99vw;
+    width: 100vw;
     transition: all 0.2s ease-in-out;
     position: relative;
     margin: 0 auto;
@@ -20,6 +20,7 @@
         text-decoration: none;
         display: inline-block;
         font-weight: bold;
+        cursor: pointer;
     }
 
     .icons-container {
@@ -33,7 +34,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 99vw;
+    width: 100vw;
     z-index: 999;
     background-color: white;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
