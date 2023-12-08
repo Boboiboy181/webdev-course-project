@@ -7,23 +7,21 @@ export const modal = () => {
         const modalBody = document.getElementsByClassName("modal-body")[0];
         if (details.category !== "auth") {
             try {
-                const response = await fetch(
-                    `${details.category}s/${details.item._id}`
-                );
-                const {content} = await response.json();
+                const response = await fetch(`${details.item._id}`);
+                const { content } = await response.json();
                 modalBody.innerHTML = content;
                 const item = {
                     category: details.category,
-                    info: details.item
-                }
-                sessionStorage.setItem("item", JSON.stringify({item}));
+                    info: details.item,
+                };
+                sessionStorage.setItem("item", JSON.stringify({ item }));
             } catch (error) {
                 console.error("Error fetching modal content:", error);
             }
         } else {
             try {
                 const response = await fetch("/auth");
-                const {content} = await response.json();
+                const { content } = await response.json();
                 modalBody.innerHTML = content;
             } catch (error) {
                 console.error("Error fetching modal content:", error);

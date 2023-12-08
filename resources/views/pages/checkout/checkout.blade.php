@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('checkout.progress')
+    @include('pages.checkout.progress')
     <div class="container">
         @yield('checkout-content')
     </div>

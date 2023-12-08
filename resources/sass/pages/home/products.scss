@@ -91,12 +91,9 @@
     }
 
     .see-more {
-        //border: 2px solid $black-primary-color;
         padding: 14px 70px;
-        //background-color: $color-5-primary;
-        border-radius: 16px;
+        border-radius: 12px;
         text-decoration: none;
-        //color: white;
         font-size: 28px;
         font-weight: 700;
         text-align: center;
@@ -105,5 +102,12 @@
         position: relative;
         left: 50%;
         transform: translateX(-50%);
+        border: 1px solid $color-5-primary;
+        color: $color-2-primary;
+
+        &:hover {
+            background-color: $color-5-primary;
+            color: white;
+        }
     }
 }

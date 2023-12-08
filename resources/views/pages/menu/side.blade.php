@@ -1,4 +1,4 @@
-@extends('menu.menu')
+@extends('pages.menu.menu')
 
 @section('menu-content')
     <div class="sides-container">

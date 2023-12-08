@@ -10,13 +10,13 @@ class CheckoutController extends Controller
     {
         $data = $request->cookie('cartItems');
 
-        return view('checkout.cart.cart', ['data' => json_decode($data)]);
+        return view('pages.checkout.cart.cart', ['data' => json_decode($data)]);
     }
 
     public function showPayment(Request $request)
     {
         $data = $request->cookie('cartItems');
 
-        return view('checkout.payment.payment', ['data' => json_decode($data)]);
+        return view('pages.checkout.payment.payment', ['data' => json_decode($data)]);
     }
 }

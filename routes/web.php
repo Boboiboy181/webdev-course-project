@@ -1,31 +1,28 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-Route::resource('/menu/pizzas', \App\Http\Controllers\PizzaController::class);
-Route::resource('/menu/sides', \App\Http\Controllers\SideController::class);
-Route::resource('/menu/drinks', \App\Http\Controllers\DrinkController::class);
-Route::resource('/menu/desserts', \App\Http\Controllers\DessertController::class);
-Route::resource('/auth', \App\Http\Controllers\AuthController::class);
-
-Route::get('cart', [\App\Http\Controllers\CheckoutController::class, 'index'])->name('cart.index');
-Route::get('/cart/payment', [\App\Http\Controllers\CheckoutController::class, 'showPayment'])->name('cart.payment');
+use \App\Http\Controllers\MenuController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
-    return view('home.home');
+    return view('pages.home.home');
 })->name('pizza.home');
 
-Route::get('/menu/combos', function () {
-    return view('menu.combo');
-})->name('pizza.combos');
+Route::prefix('/menu')->group(function () {
+    Route::get('/pizzas', [MenuController::class, 'pizzasView'])->name('pizza.pizzas');
+    Route::get('/sides', [MenuController::class, 'sidesView'])->name('pizza.sides');
+    Route::get('/drinks', [MenuController::class, 'drinksView'])->name('pizza.drinks');
+    Route::get('/desserts', [MenuController::class, 'dessertsView'])->name('pizza.desserts');
+    Route::get('/combos', function () {
+        return view('menu.combo');
+    })->name('pizza.combos');
+    Route::get('/{id}', [MenuController::class, 'productDetailView'])->name('pizza.detail');
+});
+
+Route::prefix('/cart')->group(function () {
+    Route::get('/', [CheckoutController::class, 'index'])->name('cart.index');
+    Route::get('/payment', [CheckoutController::class, 'showPayment'])->name('cart.payment');
+});
+
+Route::resource('/auth', AuthController::class);

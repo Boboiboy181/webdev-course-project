@@ -4,6 +4,10 @@
         overflow-y: scroll;
         scrollbar-width: none;
     }
+
+    &-left {
+        padding: 0 35px;
+    }
 }
 
 .cart-left-header {

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('menu.sub-nav')
+    @include('pages.menu.sub-nav')
     <div class="container">
         @yield('menu-content')
     </div>

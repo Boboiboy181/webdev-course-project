@@ -40,5 +40,5 @@ $todayHighlight = array_map('json_decode', array_map('json_encode', $todayHighli
             />
         @endforeach
     </div>
-    <a href="{{route('pizzas.index')}}" class="btn btn-outline-primary see-more">See more</a>
+    <a href="{{route('pizza.pizzas')}}" class="btn btn-outline-primary see-more">See more</a>
 </div>

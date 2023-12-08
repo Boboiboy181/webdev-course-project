@@ -5,7 +5,7 @@
             <p>{{ $item->name }}</p>
         </div>
         <p class="product-detail-desc">{{ $item->desc }}</p>
-        <div class="{{ request()->is('menu/pizzas*') ? '' : 'none' }}">
+        <div class="product-detail-content none">
             <div class="product-detail-body">
                 <div class="base">
                     <p>Base</p>

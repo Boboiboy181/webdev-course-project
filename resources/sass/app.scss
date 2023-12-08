@@ -18,24 +18,24 @@
 
 @import 'header.scss';
 @import 'footer.scss';
-@import './home/booking';
-@import './home/banner';
-@import './home/products';
+@import './pages/home/booking';
+@import './pages/home/banner';
+@import './pages/home/products';
 
 // Menu
-@import './menu/combo';
-@import './menu/pizza';
-@import './menu/dessert';
-@import './menu/drink';
-@import './menu/side';
-@import './menu/sub-nav';
-@import './menu/product-detail';
+@import './pages/menu/combo';
+@import './pages/menu/pizza';
+@import './pages/menu/dessert';
+@import './pages/menu/drink';
+@import './pages/menu/side';
+@import './pages/menu/sub-nav';
+@import './pages/menu/product-detail';
 
 // Auth
 @import './auth/auth';
 
 // Checkout
-@import './checkout/index';
+@import './pages/checkout/index';
 
 html {
     font-size: 62.5%;
