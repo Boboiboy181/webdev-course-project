@@ -39,6 +39,6 @@
 
     </div>
     <div class="btn-right-container">
-        <a href="{{route('cart.payment')}}" class="btn-proceed">Proceed to Payment</a>
+        <a href="{{route($route)}}" class="btn-proceed">Proceed to Payment</a>
     </div>
 </div>

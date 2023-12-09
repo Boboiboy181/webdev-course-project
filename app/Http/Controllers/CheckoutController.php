@@ -19,4 +19,9 @@ class CheckoutController extends Controller
 
         return view('pages.checkout.payment.payment', ['data' => json_decode($data)]);
     }
+
+    public function showThankYou()
+    {
+        return view('pages.checkout.thank-you.thank-you');
+    }
 }

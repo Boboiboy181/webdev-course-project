@@ -23,6 +23,7 @@ Route::prefix('/menu')->group(function () {
 Route::prefix('/cart')->group(function () {
     Route::get('/', [CheckoutController::class, 'index'])->name('cart.index');
     Route::get('/payment', [CheckoutController::class, 'showPayment'])->name('cart.payment');
+    Route::get('/thank-you', [CheckoutController::class, 'showThankYou'])->name('cart.thank-you');
 });
 
 Route::resource('/auth', AuthController::class);
