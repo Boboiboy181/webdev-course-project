@@ -36,6 +36,5 @@
                 <p>xxx xxx xxx VND</p>
             </div>
         </div>
-
     </div>
 </div>

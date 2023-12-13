@@ -1,7 +1,7 @@
-.cart-left
-{
+.cart-left {
     height: 900px;
 }
+
 .items {
     margin-top: 30px;
     padding: 20px 10px;
@@ -40,7 +40,7 @@
     color: #9F3F06;
 }
 
-.btn-close {
+.btn-delete {
     color: black;
     border-radius: 5px;
     border: 3px solid #A20000;
@@ -49,4 +49,8 @@
     height: 40px;
     flex-shrink: 0;
     margin-left: 30px;
+}
+
+.btn-delete:hover {
+    opacity: 0.4;
 }

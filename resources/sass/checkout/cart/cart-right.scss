@@ -1,4 +1,9 @@
 .cart-right {
+    padding-left: 30px;
+    height: 900px;
+}
+
+.cart-right .summary{
     border-left: 2px solid;
     border-color: #4E8B00;
 }
@@ -6,7 +11,7 @@
 h1 {
     color: #000;
     font-family: Quicksand;
-    font-size: 40px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -16,9 +21,9 @@ h1 {
 {
     color: #000;
     font-family: Quicksand;
-    font-size: 24px;
+    font-size: 25px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: normal;
 }
 
@@ -30,5 +35,6 @@ h1 {
 
 .summary .total
 {
-    font-size: 30px;
+    font-size: 28px;
+    font-weight: 600;
 }
