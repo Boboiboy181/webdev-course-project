@@ -1,5 +1,5 @@
-@import './sign-in';
-@import './sign-up';
+@import './login';
+@import './register';
 
 .auth {
     &-container {
@@ -51,4 +51,43 @@
             display: block !important;
         }
     }
+}
+
+.btn-auth {
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+    padding: 1rem 2rem;
+    background-color: $color-5-primary;
+    border: 1px solid $color-5-primary;
+
+    &:hover {
+        background-color: white !important;
+        border: 1px solid $color-2-primary !important;
+        color: $black-primary-color;
+    }
+}
+
+.form-floating > .form-control, .form-floating > .form-control-plaintext {
+    padding: 2rem 0.75rem;
+}
+
+.form-floating > .form-control, .form-floating > .form-control-plaintext, .form-floating > .form-select {
+    height: calc(4.5rem + calc(var(--bs-border-width) * 2));
+    min-height: calc(4.5rem + calc(var(--bs-border-width) * 2));
+    line-height: 1.25;
+}
+
+.form-floating > label {
+    font-size: 1.1rem;
+    top: 4px;
+    padding: 1rem 0.75rem;
+}
+
+.auth-title {
+    font-size: 3rem !important;
+    font-weight: 500 !important;
+}
+
+.form-control {
+    font-size: 1.4rem;
 }
