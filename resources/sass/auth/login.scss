@@ -17,6 +17,10 @@
     letter-spacing: 0.05rem;
     padding: 10px 20px !important;
     font-size: 1.4rem !important;
+
+    &:hover {
+        color: black !important;
+    }
 }
 
 .container-login {

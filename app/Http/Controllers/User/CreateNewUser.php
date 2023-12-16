@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\User;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -42,6 +42,7 @@ class CreateNewUser implements CreatesNewUsers
             'two_factor_secret' => null,
             'two_factor_recovery_codes' => null,
             'remember_token' => null,
+            'role' => 'user',
         ]);
     }
 }

@@ -9,7 +9,7 @@ Route::get('/', function () {
 })->name('pizza.home');
 
 Route::get('/home', function () {
-    return redirect()->route('pizza.home');
+    return view('pages.home.home');
 })->name('pizza.home')->middleware(['auth', 'verified']);
 
 Route::prefix('/menu')->group(function () {
@@ -29,4 +29,8 @@ Route::prefix('/cart')->group(function () {
     Route::get('/thank-you', [CheckoutController::class, 'showThankYou'])->name('cart.thank-you');
 });
 
-Route::resource('/auth', \App\Http\Controllers\Auth\AuthController::class);
+Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
+    Route::get('/', function () {
+        return view('pages.admin.dashboard');
+    })->name('admin.dashboard');
+});
