@@ -18,6 +18,8 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('https://startbootstrap.github.io/startbootstrap-sb-admin-2/css/sb-admin-2.min.css') }}"
           rel="stylesheet">
+
+    @yield('custome-styles')
     @vite('resources/js/admin.js')
 </head>
 <body id="page-top">
@@ -85,5 +87,7 @@
 <!-- Page level plugins -->
 <script
     src="{{ asset('https://startbootstrap.github.io/startbootstrap-sb-admin-2/vendor/chart.js/Chart.min.js') }}"></script>
+<!-- Page level custom scripts -->
+@yield('custome-scripts')
 </body>
 </html>
