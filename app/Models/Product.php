@@ -15,7 +15,6 @@ class Product extends Model
         'price',
         'category',
         'desc',
-        'toppingType',
-        'pizzaCategory',
+        'additionalProperties',
     ];
 }

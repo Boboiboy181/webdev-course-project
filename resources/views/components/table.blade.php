@@ -8,7 +8,7 @@
             <th>{{$field2}}</th>
             <th>{{$field3}}</th>
             <th>{{$field4}}</th>
-            <th style="width: 215px">Action</th>
+            <th style="width: 50px">Action</th>
         </tr>
         </thead>
         <tfoot>
@@ -17,7 +17,7 @@
             <th>{{$field2}}</th>
             <th>{{$field3}}</th>
             <th>{{$field4}}</th>
-            <th style="width: 215px">Action</th>
+            <th style="width: 50px">Action</th>
         </tr>
         </tfoot>
         <tbody>
