@@ -12,58 +12,80 @@
                         <img id="preview" src="{{ url('/assets/uploadyourown.png') }}" alt="" class="w-100">
                     </div>
                     <div class="col-md-9">
-                        <form id="form-submit"
-                              method="POST">
+                        <form id="form-submit" method="POST" action="{{route('admin.product.store')}}"
+                              enctype="multipart/form-data">
                             @csrf
-                            @method('PATCH')
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input
                                     type="text"
-                                    class="form-control"
+                                    class="form-control @error('name') is-invalid @enderror"
                                     id="name"
                                     name="name"
                                     placeholder="Enter product name"
                                     required
                                 >
+                                @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{$message}}</strong>
+                                </span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="price">Price</label>
                                 <input
                                     type="number"
-                                    class="form-control"
+                                    class="form-control @error('price') is-invalid @enderror"
                                     id="price"
                                     name="price"
                                     placeholder="Enter product price"
                                     required
                                 >
+                                @error('price')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{$message}}</strong>
+                                </span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="desc">Description</label>
                                 <input
                                     type="text"
-                                    class="form-control"
+                                    class="form-control @error('desc') is-invalid @enderror"
                                     id="desc"
                                     name="desc"
                                     placeholder="Enter product description"
                                     required
                                 >
+                                @error('desc')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{$message}}</strong>
+                                </span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="category">Category</label>
-                                <select class="form-control" id="category" name="category" required>
+                                <select class="form-control @error('category') is-invalid @enderror" id="category"
+                                        name="category" required>
                                     <option value="pizza">Pizza</option>
                                     <option value="side">Side</option>
                                     <option value="dessert">Dessert</option>
                                     <option value="drink">Drink</option>
                                 </select>
+                                @error('category')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{$message}}</strong>
+                                </span>
+                                @enderror
                             </div>
 
                             <div id="additional-pizza">
                                 <div class="form-group">
                                     <label for="additionalProperties[variant]">Variant</label>
-                                    <select class="form-control" id="additionalProperties[variant]"
-                                            name="additionalProperties[variant]" required>
+                                    <select
+                                        class="form-control @error('additionalProperties[variant]') is-invalid @enderror"
+                                        id="additionalProperties[variant]"
+                                        name="additionalProperties[variant]" required>
                                         <option
                                             value="flavors of the world">
                                             Flavors Of The World
@@ -81,12 +103,19 @@
                                             Kid Favors
                                         </option>
                                     </select>
+                                    @error('additionalProperties[variant]')
+                                    <span class="invalid-feedback" role="alert">
+                                    <strong>{{$message}}</strong>
+                                    </span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="additionalProperties[topping]">Topping</label>
-                                    <select class="form-control" id="additionalProperties[topping]"
-                                            name="additionalProperties[topping]"
-                                            required>
+                                    <select
+                                        class="form-control @error('additionalProperties[topping]') is-invalid @enderror"
+                                        id="additionalProperties[topping]"
+                                        name="additionalProperties[topping]"
+                                        required>
                                         <option value="Seafood">
                                             Seafood
                                         </option>
@@ -103,14 +132,21 @@
                                             Vegetarian
                                         </option>
                                     </select>
+                                    @error('additionalProperties[topping]')
+                                    <span class="invalid-feedback" role="alert">
+                                    <strong>{{$message}}</strong>
+                                    </span>
+                                    @enderror
                                 </div>
                             </div>
 
                             <div id="additional-side" style="display: none">
                                 <div class="form-group">
                                     <label for="additionalProperties[variant]">Variant</label>
-                                    <select class="form-control" id="additionalProperties[variant]"
-                                            name="additionalProperties[variant]" required>
+                                    <select
+                                        class="form-control @error('additionalProperties[variant]') is-invalid @enderror"
+                                        id="additionalProperties[variant]"
+                                        name="additionalProperties[variant]" required>
                                         <option
                                             value="Potato">
                                             Potato
@@ -132,67 +168,61 @@
                                             Bread
                                         </option>
                                     </select>
+                                    @error('additionalProperties[variant]')
+                                    <span class="invalid-feedback" role="alert">
+                                    <strong>{{$message}}</strong>
+                                    </span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="additionalProperties[topping]">Topping</label>
-                                    <select class="form-control" id="additionalProperties[topping]"
-                                            name="additionalProperties[topping]"
-                                            required>
-                                        <option
-                                            value="Seafood">
+                                    <select
+                                        class="form-control @error('additionalProperties[topping]') is-invalid @enderror"
+                                        id="additionalProperties[topping]"
+                                        name="additionalProperties[topping]"
+                                        required>
+                                        <option value="Seafood">
                                             Seafood
                                         </option>
-                                        <option
-                                            value="Beef">
+                                        <option value="Beef">
                                             Beef
                                         </option>
-                                        <option
-                                            value="Chicken">
+                                        <option value="Chicken">
                                             Chicken
                                         </option>
-                                        <option
-                                            value="Pork">
+                                        <option value="Pork">
                                             Pork
                                         </option>
-                                        <option
-                                            value="Vegetarian">
+                                        <option value="Vegetarian">
                                             Vegetarian
                                         </option>
                                     </select>
+                                    @error('additionalProperties[topping]')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{$message}}</strong>
+                                    </span>
+                                    @enderror
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleFormControlFile1">Product Image</label>
-                                <input type="file" class="form-control-file" id="image"
-                                       accept="image/png, image/jpeg, image/jpg">
+                                <label for="image">Product Image</label>
+                                <input type="file" class="form-control-file @error('imgURL') is-invalid @enderror"
+                                       id="image" name="imgURL"
+                                       accept="image/png, image/jpeg, image/jpg" required>
+                                @error('imgURL')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{$message}}</strong>
+                                </span>
+                                @enderror
                             </div>
 
                             <div>
-                                <button type="button" data-toggle="modal" data-target="#confirmModal"
-                                        class="btn btn-success">Submit
+                                <button type="submit" class="btn btn-success">Submit
                                 </button>
                             </div>
                         </form>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModal"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="confirmModal">Are you sure to update?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Update" below if you want to make this change.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <button type="submit" id="btn-submit" class="btn btn-primary">Update</button>
                 </div>
             </div>
         </div>
@@ -229,6 +259,5 @@
                 reader.readAsDataURL(input.files[0]);
             }
         });
-
     </script>
 @endsection

@@ -11,37 +11,42 @@
                 fill="black"/>
         </svg>
     </button>
-    <ul class="dropdown-menu">
-        @auth
-            <li class="dropdown-item">
-                <p>Name: {{ auth()->user()->name }}</p>
-            </li>
-            <li class="dropdown-item">
-                <a class="" href="#">Your profile</a>
-            </li>
+    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+        @if( auth()->check() )
+            <a class="dropdown-item fw-normal" href="#">
+                Hello,
+                {{ auth()->user()->name }}
+            </a>
+            <a class="dropdown-item fw-normal" href="#">
+                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                Your Profile
+            </a>
 
-            @if(Auth::user()->role == 'admin')
-                <li class="dropdown-item">
-                    <a class="" href="{{route('admin.dashboard')}}">Dashboard</a>
-                </li>
+            @if(auth()->user()->role == 'admin')
+                <a class="dropdown-item fw-normal" href="{{route('admin.dashboard')}}">
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Dashboard
+                </a>
             @endif
 
-            <hr>
-
-            <li class="dropdown-item">
-                <form action="{{ route('logout') }}" method="POST">
-                    @csrf
-                    <button type="submit"
-                            class="btn btn-lg btn-danger btn-login fw-bold text-uppercase">Logout
-                    </button>
-                </form>
-            </li>
+            <div class="dropdown-divider"></div>
+            <form action="{{route('logout')}}" method="POST">
+                @csrf
+                <button class="dropdown-item fw-normal" type="submit">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Logout
+                </button>
+            </form>
         @else
-            <li class="d-block w-100 text-center">
-                <a role="button"
-                   class="px-6 py-12 btn btn-primary btn-login fw-bold text-uppercase"
-                   href="{{ route('login') }}">Login</a>
-            </li>
-        @endauth
-    </ul>
+            <a class="dropdown-item fw-normal" href="{{route('login')}}">
+                <i class="fas fa-sign-in-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                Login
+            </a>
+            <a class="dropdown-item fw-normal" href="{{route('register')}}">
+                <i class="fas fa-user-plus fa-sm fa-fw mr-2 text-gray-400"></i>
+                Register
+            </a>
+        @endif
+    </div>
 </div>
+

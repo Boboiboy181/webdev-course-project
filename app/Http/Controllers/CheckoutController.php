@@ -10,12 +10,20 @@ class CheckoutController extends Controller
     {
         $data = $request->cookie('cartItems');
 
+        if (! count(json_decode($data))) {
+            return redirect()->route('pizza.pizzas');
+        }
+
         return view('pages.checkout.cart.cart', ['data' => json_decode($data)]);
     }
 
     public function showPayment(Request $request)
     {
         $data = $request->cookie('cartItems');
+
+        if (! count(json_decode($data))) {
+            return redirect()->route('pizza.pizzas');
+        }
 
         return view('pages.checkout.payment.payment', ['data' => json_decode($data)]);
     }

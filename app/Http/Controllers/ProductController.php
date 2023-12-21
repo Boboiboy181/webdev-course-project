@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ProductRequest;
+use App\Http\Requests\StoreProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 use App\Models\Product;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 
 class ProductController extends Controller
 {
@@ -26,6 +28,17 @@ class ProductController extends Controller
         return view('pages.admin.product.product-create');
     }
 
+    public function store(StoreProductRequest $request)
+    {
+        $data = $request->validated();
+        $image = $data['imgURL'];
+        $uploadedFileUrl = Cloudinary::upload($image->getRealPath())->getSecurePath();
+        $data['imgURL'] = $uploadedFileUrl;
+        $product = Product::create($data);
+
+        return redirect()->route('admin.product.detail', ['id' => $product->_id])->with('success', 'Product created successfully');
+    }
+
     public function edit(string $id)
     {
         $product = Product::findOrFail($id);
@@ -33,7 +46,7 @@ class ProductController extends Controller
         return view('pages.admin.product.product-edit', ['product' => $product]);
     }
 
-    public function update(ProductRequest $request, string $id)
+    public function update(UpdateProductRequest $request, string $id)
     {
         $product = Product::findOrFail($id);
 
@@ -48,7 +61,7 @@ class ProductController extends Controller
     {
         $product = Product::findOrFail($id);
 
-        //        $product->delete();
+        $product->delete();
 
         return redirect()->route('admin.product')->with('success', 'Product deleted successfully');
     }

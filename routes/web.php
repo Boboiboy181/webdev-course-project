@@ -19,7 +19,7 @@ Route::prefix('/menu')->group(function () {
     Route::get('/drinks', [MenuController::class, 'drinksView'])->name('pizza.drinks');
     Route::get('/desserts', [MenuController::class, 'dessertsView'])->name('pizza.desserts');
     Route::get('/combos', function () {
-        return view('menu.combo');
+        return view('pages.menu.combo');
     })->name('pizza.combos');
     Route::get('/{id}', [MenuController::class, 'productDetailView'])->name('pizza.detail');
 });
