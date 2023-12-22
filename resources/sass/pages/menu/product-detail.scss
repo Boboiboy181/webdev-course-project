@@ -1,7 +1,7 @@
 @mixin optionTextStyle() {
     font-size: 2.2rem;
     font-weight: 700;
-    color: white;
+    color: $color-2-primary;
 }
 
 .product-detail {
@@ -21,12 +21,11 @@
         img {
             border-radius: 10px;
             width: 200px;
-            border: 2px solid white;
-            background-color: white;
+            //background-color: $black;
         }
 
         p {
-            color: #fff;
+            color: $color-2-primary;
             font-size: 2.2rem;
             font-style: normal;
             font-weight: 700;
@@ -35,18 +34,18 @@
     }
 
     &-desc {
-        color: white;
+        color: $black;
     }
 
     &-body {
-        border-top: 2px solid rgba(white, .5);
-        border-bottom: 2px solid rgba(white, .5);
+        border-top: 2px solid rgba($black, .5);
+        border-bottom: 2px solid rgba($black, .5);
         display: flex;
         justify-content: space-between;
         padding: 10px 0;
 
         label {
-            color: white;
+            color: $black;
         }
 
         p {
@@ -55,11 +54,11 @@
     }
 
     &-footer {
-        border-bottom: 2px solid rgba(white, .5);
+        border-bottom: 2px solid rgba($black, .5);
         padding: 10px 0;
 
         label {
-            color: white;
+            color: $black;
         }
 
         p {

@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         @include('pages.home.banner')
-        @include('pages.home.booking')
+        {{--        @include('pages.home.booking')--}}
         @include('pages.home.products')
     </div>
 @endsection

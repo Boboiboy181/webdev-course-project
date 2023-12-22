@@ -26,8 +26,8 @@
         </a>
     </li>
 
-    <li class="nav-item">
-        <a class="nav-link" href="">
+    <li class="nav-item {{ Str::startsWith(request()->route()->getName(), 'admin.user') ? 'active' : '' }}">
+        <a class="nav-link" href="{{route('admin.user')}}">
             <i class="fas fa-fw fa-table"></i>
             <span>User</span>
         </a>
@@ -50,3 +50,19 @@
     </div>
 
 </ul>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('sidebarToggle').addEventListener('click', function () {
+            if (localStorage.getItem('sidebar-toggle') === 'toggled') {
+                localStorage.setItem('sidebar-toggle', '');
+            } else localStorage.setItem('sidebar-toggle', 'toggled');
+        });
+
+        const sidebarState = localStorage.getItem('sidebar-toggle');
+        if (sidebarState === 'toggled') {
+            const sidebar = document.getElementById('accordionSidebar');
+            sidebar.classList.toggle('toggled');
+        }
+    });
+</script>
