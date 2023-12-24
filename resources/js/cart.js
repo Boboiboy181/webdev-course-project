@@ -143,8 +143,6 @@ myModal.addEventListener("shown.bs.modal", async function () {
             quantity: Number(quantity.value),
         };
 
-        console.log(newItem)
-
         if (item.category === "pizza") {
             newItem.price = price;
             newItem.crust = crustValue;

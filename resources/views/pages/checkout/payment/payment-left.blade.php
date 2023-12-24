@@ -4,7 +4,7 @@
         <i class="fa-regular fa-location-pin"></i>
         <div>
             <p class="fs-1 fw-semibold"><span class="name">Your name</span> - <span
-                    class="phone">Your phonenumber</span></p>
+                    class="phone">Your phone number</span></p>
             <p class="address">Address here</p>
         </div>
     </div>
@@ -42,7 +42,7 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-1" id="addressModalLabel">Your checkoutInput</h1>
+                <h1 class="modal-title fs-1" id="addressModalLabel">Your Address</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -75,7 +75,7 @@
                             id="phone"
                             name="phone"
                             value="{{auth()->user() ? auth()->user()->phone : ''}}"
-                            placeholder="Enter your phonenumber"
+                            placeholder="Enter your phone number"
                             required
                         >
                         <label for="phone">Phone</label>

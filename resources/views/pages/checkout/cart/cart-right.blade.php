@@ -63,7 +63,10 @@
             <div class="modal-body fs-2">Select "Update" below if you want to make this change.</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary fs-2" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary fs-2 btn-create-order">Confirm</button>
+                <form method="POST" action="{{route('order.store')}}" id="order-form">
+                    @csrf
+                    <button type="submit" class="btn btn-primary fs-2 btn-create-order">Confirm</button>
+                </form>
             </div>
         </div>
     </div>

@@ -22,7 +22,7 @@
                                        @error('email') is-invalid @enderror"
                                        id="floatingInputEmail"
                                        placeholder="name@example.com" name="email" required>
-                                <label for="floatingInputEmail">Email checkoutInput</label>
+                                <label for="floatingInputEmail">Email address</label>
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>

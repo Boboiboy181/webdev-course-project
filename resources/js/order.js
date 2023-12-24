@@ -5,7 +5,7 @@ const btnCreateOrder = document.querySelector('.btn-create-order') || null;
 
 const totalPrice = () => {
     const deliveryChecked = document.querySelector('.delivery-check-input:checked') || null;
-    let deliveryFee = 0;
+    let deliveryFee;
     if (deliveryChecked.value === 'priority') {
         deliveryFee = 15000;
     } else {
@@ -19,18 +19,51 @@ const totalPrice = () => {
 }
 
 
-btnCreateOrder?.addEventListener('click', function (e) {
+btnCreateOrder?.addEventListener('click', async function (e) {
+    e.preventDefault();
+
+    if (cartItems.length === 0) {
+        alert('Giỏ hàng trống');
+        return;
+    }
+
+    const paymentMethod = document.querySelector('.payment-method:checked') || null;
+
     const order = {
         customer: {
             id: customerInfo?.id || '',
             name: customerInfo?.fullName,
             phone: customerInfo?.phone,
         },
-        totalPrice: totalPrice(),
+        total_price: totalPrice(),
         items: cartItems,
-        note: note.value,
+        note: note.value || '',
         address: customerInfo?.address,
-    }
-    console.log(order)
+        payment_method: paymentMethod?.value || '',
+    };
 
+    const response = await axios.post('/orders', order, {
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+        .then(function (response) {
+            return response.data;
+        })
+        .catch(function (error) {
+            console.error(error);
+            return error.response.data;
+        });
+
+    // clear cart
+    localStorage.removeItem('cartItems');
+
+    // set cookies cartItems
+    const cartItemsCookie = JSON.stringify([]);
+    document.cookie = `cartItems=${cartItemsCookie}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/;SameSite=None;Secure`;
+
+    document.open();
+    window.location.replace('http://127.0.0.1:8000/cart/thank-you');
+    document.write(response);
+    document.close();
 });

@@ -12,9 +12,6 @@ const render = () => {
 
     if (fullNameInput === null || addressInput === null || phoneInput === null || btnSubmit === null || idInput === null) return;
 
-    fullNameInput.value = data.fullName;
-    addressInput.value = data.address;
-    phoneInput.value = data.phone;
     address.innerHTML = data.address;
     name.innerHTML = data.fullName;
     phone.innerHTML = data.phone;
@@ -26,7 +23,7 @@ btnSubmit?.addEventListener('click', function (e) {
     const address = addressInput.value;
     const phone = phoneInput.value;
     const data = {
-        id,
+        _id: id,
         fullName,
         address,
         phone,
