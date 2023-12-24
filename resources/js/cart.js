@@ -54,7 +54,7 @@ myModal.addEventListener("shown.bs.modal", async function () {
         else if (cheese === "No extras cheese") cheesePrice = 0;
         else cheesePrice = 64000;
 
-        return (sizePrice + cheesePrice) * quantity.value;
+        return (sizePrice + cheesePrice);
     };
 
     const getSelectedValue = (options) => {
@@ -100,10 +100,10 @@ myModal.addEventListener("shown.bs.modal", async function () {
             crustValue = getSelectedValue(crustCheckBox);
             price = getPrice(sizeValue, cheeseValue);
         } else {
-            price = quantity.value * item.info.price;
+            price = item.info.price;
         }
 
-        previewPrice.innerHTML = price
+        previewPrice.innerHTML = (price * quantity.value)
             .toString()
             .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
@@ -142,6 +142,8 @@ myModal.addEventListener("shown.bs.modal", async function () {
             ...item.info,
             quantity: Number(quantity.value),
         };
+
+        console.log(newItem)
 
         if (item.category === "pizza") {
             newItem.price = price;

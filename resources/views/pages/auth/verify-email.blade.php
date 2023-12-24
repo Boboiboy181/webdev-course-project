@@ -10,7 +10,8 @@
                     </div>
                     <div class="card-body p-4 p-sm-5">
                         <h5 class="card-title mb-5 fw-light fs-2 auth-title text-start">
-                            You must verify your email address, please check your email for a verification link</h5>
+                            You must verify your email checkoutInput, please check your email for a verification
+                            link</h5>
                         @if(session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{session('status')}}

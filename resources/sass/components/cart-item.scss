@@ -7,7 +7,7 @@
         border-radius: 10px;
         width: 100%;
         position: relative;
-        
+
         & > div:first-child {
             display: flex;
             gap: 15px;
@@ -32,11 +32,12 @@
             margin: unset;
         }
 
-        p:nth-child(6) {
+        .btn-action {
             span {
                 margin-left: 10px;
                 font-size: 1.8rem;
                 cursor: pointer;
+                font-weight: normal;
 
                 &:hover {
                     color: $color-1-primary;
@@ -52,7 +53,6 @@
             input {
                 border: 1px solid $black-primary-color;
                 border-radius: 35px;
-                background: unset;
                 font-size: 2rem;
                 width: 50px;
                 text-align: center;
