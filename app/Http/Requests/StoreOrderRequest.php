@@ -38,6 +38,7 @@ class StoreOrderRequest extends FormRequest
             'customer.phone' => 'required|string',
             'items' => 'required|array',
             'items.*._id' => 'required|string',
+            'items.*.name' => 'required|string',
             'items.*.category' => 'required|string',
             'items.*.price' => 'required|numeric',
             'items.*.quantity' => 'required|integer',

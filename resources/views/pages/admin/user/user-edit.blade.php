@@ -73,7 +73,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="role">Role</label>
-                                <select class="form-control @error('email') is-invalid @enderror" id="role" name="role"
+                                <select class="form-control @error('role') is-invalid @enderror" id="role" name="role"
                                         required>
                                     <option {{$user->role === 'user' ? 'selected': ''}} value="user">User
                                     </option>

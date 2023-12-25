@@ -61,4 +61,13 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
         Route::patch('/{id}', [UserController::class, 'update'])->name('admin.user.update');
         Route::delete('/{id}', [UserController::class, 'destroy'])->name('admin.user.delete');
     });
+
+    //    Order Controller
+    Route::prefix('orders')->group(function () {
+        Route::get('/', [OrderController::class, 'index'])->name('admin.order');
+        Route::get('/{id}', [OrderController::class, 'show'])->name('admin.order.detail');
+        Route::get('/{id}/edit', [OrderController::class, 'edit'])->name('admin.order.edit');
+        Route::patch('/{id}', [OrderController::class, 'update'])->name('admin.order.update');
+        Route::delete('/{id}', [OrderController::class, 'destroy'])->name('admin.order.delete');
+    });
 });
