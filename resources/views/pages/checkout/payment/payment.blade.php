@@ -2,12 +2,12 @@
 
 @section('checkout-content')
     <div class="row cart-container">
-        <div class="col-6 payment-left">
+        <div class="col-12 col-md-6 col-xl-6 payment-left">
             @include('pages.checkout.payment.payment-left')
             @include('pages.checkout.cart.cart-left', ['data' => $data])
             @include('pages.checkout.payment.payment-left-note')
         </div>
-        <div class="col-6 payment-right">
+        <div class="col-12 col-md-6 col-xl-6 payment-right">
             @include('pages.checkout.payment.payment-right')
             @include('pages.checkout.cart.cart-right', ['data' => $data, 'route' => 'cart.thank-you'])
         </div>

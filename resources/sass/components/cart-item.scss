@@ -11,6 +11,11 @@
         & > div:first-child {
             display: flex;
             gap: 15px;
+
+            @include mobile {
+                flex-direction: column;
+                gap: 5px;
+            }
         }
     }
 
@@ -33,11 +38,16 @@
         }
 
         .btn-action {
+            p {
+                font-size: 1.6rem;
+                font-weight: 500;
+            }
+
             span {
                 margin-left: 10px;
                 font-size: 1.8rem;
                 cursor: pointer;
-                font-weight: normal;
+                font-weight: bold;
 
                 &:hover {
                     color: $color-1-primary;
@@ -113,6 +123,16 @@
             font-weight: 500;
             font-size: 2.5rem;
             margin: unset;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            gap: 5px;
+            padding: 10px 0;
+
+            p:nth-child(1) {
+                margin: unset;
+            }
         }
     }
 }

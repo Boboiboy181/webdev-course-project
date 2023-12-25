@@ -47,4 +47,30 @@
         justify-content: center;
         gap: 10%;
     }
+
+    @include mobile {
+        &-container {
+            padding: 20px 0 20px 0;
+            font-size: 2rem;
+        }
+
+        &-item {
+            gap: 20px;
+        }
+
+        &-point {
+            width: 25px;
+            height: 25px;
+        }
+
+        &-line {
+            width: 50px;
+            height: 1px;
+        }
+
+        &-name {
+            width: 100%;
+            gap: 10px;
+        }
+    }
 }

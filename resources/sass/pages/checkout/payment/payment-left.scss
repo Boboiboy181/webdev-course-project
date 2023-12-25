@@ -62,10 +62,14 @@ p.address {
 }
 
 .option-cell {
-    width: 45%;
+    width: 47%;
     padding: 10px;
     border-radius: 10px;
     border: 2px solid $color-2-primary;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 p.shipping {
