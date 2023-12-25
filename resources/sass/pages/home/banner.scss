@@ -1,5 +1,7 @@
 .banner-container {
     text-align: center;
+    overflow: hidden;
+    z-index: -1;
 
     .dots-container {
         display: flex;
@@ -24,8 +26,14 @@
         height: 100%;
         object-fit: cover;
     }
+
+    &-imgs {
+        border-radius: 23px;
+
+        @include mobile {
+            border-radius: 0;
+
+        }
+    }
 }
 
-.banner-container {
-    overflow: hidden;
-}

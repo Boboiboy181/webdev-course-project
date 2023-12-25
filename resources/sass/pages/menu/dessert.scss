@@ -6,6 +6,10 @@
     height: 100vh;
     justify-content: space-between;
 
+    @include mobile {
+        padding: 50px 80px;
+    }
+
     .dessert {
         &-item {
             border: 1px solid $color-2-primary;
@@ -18,6 +22,14 @@
             display: flex;
             flex-direction: column;
             max-height: 300px;
+
+            @include tablet {
+                width: 45%;
+            }
+
+            @include mobile {
+                width: 100%;
+            }
         }
 
         &-img {

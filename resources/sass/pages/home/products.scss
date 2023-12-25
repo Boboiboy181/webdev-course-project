@@ -9,6 +9,10 @@
         font-weight: 700;
         word-wrap: break-word;
         margin-bottom: 24px;
+
+        @include mobile {
+            font-size: 30px;
+        }
     }
 
     .red-line {
@@ -18,6 +22,11 @@
         background-color: $red-primary-color;
         border-radius: 100px;
         margin-top: 4px;
+
+        @include mobile {
+            width: 80px;
+            height: 6px;
+        }
     }
 
     .products-list {
@@ -25,6 +34,12 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 30px;
+            padding: 0 20px;
+        }
 
         .todayHighlight {
             &-item {
@@ -36,6 +51,10 @@
                 box-shadow: 2px 2px 3px 2px rgba($color-2-primary, $alpha: .8);
                 cursor: pointer;
                 height: fit-content;
+
+                @include mobile {
+                    width: 100%;
+                }
             }
 
             &-img {
@@ -104,6 +123,12 @@
         transform: translateX(-50%);
         border: 1px solid $color-5-primary;
         color: $color-2-primary;
+
+        @include mobile {
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
 
         &:hover {
             background-color: $color-2-primary;

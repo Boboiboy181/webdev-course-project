@@ -17,9 +17,10 @@
         </li>
         <li><a class="{{ request()->is('menu/pizzas') ? 'active' : '' }}" href="{{ route('pizza.pizzas') }}">Pizza</a>
         </li>
-        <li><a class="{{ request()->is('menu/sides') ? 'active' : '' }}" href="{{ route('pizza.sides') }}">Side dishes</a>
+        <li><a class="{{ request()->is('menu/sides') ? 'active' : '' }}" href="{{ route('pizza.sides') }}">Side</a>
         </li>
-        <li><a class="{{ request()->is('menu/desserts') ? 'active' : '' }}" href="{{ route('pizza.desserts') }}">Dessert</a>
+        <li><a class="{{ request()->is('menu/desserts') ? 'active' : '' }}"
+               href="{{ route('pizza.desserts') }}">Dessert</a>
         </li>
         <li><a class="{{ request()->is('menu/drinks') ? 'active' : '' }}" href="{{ route('pizza.drinks') }}">Drink</a>
         </li>
@@ -29,7 +30,7 @@
             @foreach ($tags as $tag)
                 <li>
                     <a class="{{ $currentTag === 'All' || (empty($currentTag) && $tag === 'All') || $currentTag === $tag ? 'active' : '' }}"
-                        href="{{ route($request, ['tag' => $tag === 'All' ? null : $tag]) }}">{{ $tag }}</a>
+                       href="{{ route($request, ['tag' => $tag === 'All' ? null : $tag]) }}">{{ $tag }}</a>
                 </li>
             @endforeach
         </ul>
