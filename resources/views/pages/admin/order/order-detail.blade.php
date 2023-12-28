@@ -40,6 +40,10 @@
                         </div>
                     </div>
                     <div class="detail-status-info col-md-6">
+                         <div class="detail-info detail-status">
+                            <p>Order payment method</p>
+                            <p class="text-black">{{ $order->payment_method }}</p>
+                        </div>
                         <div class="detail-info detail-status">
                             <p>Order status</p>
                             <p class="text-black">{{ $order->status }}</p>

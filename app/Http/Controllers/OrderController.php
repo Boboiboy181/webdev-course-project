@@ -63,6 +63,10 @@ class OrderController extends Controller
     {
         $order = Order::findOrFail($id);
 
+        if (!$order) {
+            return response()->json(['message' => 'Order not found'], 404);
+        }
+
         $data = $request->validated();
 
         $order->update($data);

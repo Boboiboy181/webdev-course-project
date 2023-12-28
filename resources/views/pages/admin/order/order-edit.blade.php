@@ -44,6 +44,10 @@
                         @csrf
                         @method('PATCH')
                         <div class="detail-status-info flex-wrap">
+                            <div class="detail-info detail-status">
+                                <p>Order payment method</p>
+                                <p class="text-black">{{ $order->payment_method }}</p>
+                            </div>
                             <div class="detail-status">
                                 <div class="form-group">
                                     <label for="status">Order status</label>
