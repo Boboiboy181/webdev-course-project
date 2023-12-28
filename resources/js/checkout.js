@@ -5,7 +5,8 @@ const cartQuantity = document.querySelectorAll(".cart-quantity") || null;
 const incrementBtns = document.querySelectorAll(".increment-btn") || null;
 const decrementBtns = document.querySelectorAll(".decrement-btn") || null;
 const deleteBtns = document.querySelectorAll(".btn-delete") || null;
-const cartList = document.querySelector(".cart-left > div") || null;
+const deliveryOptions = document.querySelectorAll(".delivery-check-input") || null;
+const itemsPrice = document.querySelectorAll(".total-item-price") || null;
 
 if (points) {
     switch (location) {
@@ -33,6 +34,42 @@ const setCookie = () => {
     )}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/;SameSite=None;Secure`;
 };
 
+const subPrice = (deliveryFee = 0) => {
+    const cartItems = getCartItems();
+
+    const subPrices = document.querySelectorAll('.sub-price') || null;
+
+    subPrices.forEach(item => {
+        item.innerHTML = (cartItems?.reduce(
+            (total, item) => total + item.quantity * item.price,
+            0
+        ) + deliveryFee).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    });
+}
+
+const totalPrice = (deliveryFee = 0) => {
+    subPrice();
+    const cartItems = getCartItems();
+
+    const totalPrice = document.querySelector('.total-price') || null;
+
+    if (!totalPrice) {
+        return;
+    }
+
+    totalPrice.innerHTML = (cartItems?.reduce(
+        (total, item) => total + item.quantity * item.price,
+        0
+    ) + deliveryFee).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+const totalItemPrice = () => {
+    const cartItems = getCartItems();
+    itemsPrice?.forEach((itemPrice, index) => {
+        itemPrice.innerHTML = (cartItems[index]?.quantity * cartItems[index]?.price).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    });
+}
+
 const render = (quantity, index) => {
     const cartItems = getCartItems();
     totalCart.innerHTML = cartItems.reduce(
@@ -46,6 +83,9 @@ const render = (quantity, index) => {
         }
         cartQuantity[index].value = quantity;
     }
+
+    totalItemPrice();
+    totalPrice();
 };
 
 incrementBtns?.forEach((incrementBtn, index) => {
@@ -90,3 +130,23 @@ deleteBtns?.forEach((deleteBtn) => {
         window.location.href = url;
     });
 });
+
+deliveryOptions?.forEach((deliveryOption) => {
+    deliveryOption.addEventListener("click", () => {
+        if (deliveryOption.checked) {
+            if (deliveryOption.value === 'priority') {
+                const deliveryFee = 15000;
+                document.querySelector('.delivery-fee').innerHTML = deliveryFee.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                totalPrice(deliveryFee);
+            } else {
+                const deliveryFee = 0;
+                document.querySelector('.delivery-fee').innerHTML = deliveryFee.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                totalPrice(deliveryFee);
+            }
+        }
+    });
+});
+
+totalItemPrice();
+totalPrice();
+

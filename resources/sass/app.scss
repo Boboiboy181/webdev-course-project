@@ -10,6 +10,9 @@
 // Partials
 @import 'partials/back-to-top.scss';
 
+// Responsive
+@import 'responsive';
+
 // Components
 @import 'components/modal';
 @import 'components/toast';
@@ -37,6 +40,9 @@
 // Checkout
 @import './pages/checkout/index';
 
+// Tracking
+@import './pages/track-oder/track-order';
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -47,4 +53,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
+}
+
+.app-container {
+    overflow: hidden;
+    width: 100%;
 }

@@ -8,6 +8,12 @@
         margin: 20px auto 0;
         width: 95vw;
         transition: all 0.2s ease-in-out;
+
+        @include mobile {
+            overflow-x: scroll;
+            padding: 0;
+            border: none;
+        }
     }
 
     &-list {
@@ -17,6 +23,16 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 75px 0;
+
+        @include mobile {
+            margin: 0;
+            font-size: 1.6rem;
+            @include tab;
+            gap: 10px;
+
+            overflow-x: scroll;
+
+        }
 
         li {
             cursor: pointer;
@@ -49,6 +65,17 @@
             display: none !important;
         }
 
+        @include mobile {
+            overflow-x: scroll;
+            padding: 0;
+            margin: 15px 10px 0;
+        }
+
+        @include tablet {
+            overflow-x: scroll;
+            margin: 15px 10px 0;
+        }
+
         ul {
             border-radius: 33px;
             display: flex;
@@ -58,35 +85,15 @@
             margin: unset;
             padding: 15px 0;
 
-            li {
-                a {
-                    display: inline-block;
-                    font-size: 1.6rem;
-                    font-weight: 700;
-                    padding: 5px 50px;
-                    border: 2px solid $color-2-primary;
-                    border-radius: 39px;
-                    cursor: pointer;
-                    transition: all 0.2s ease-in-out;
-                    text-decoration: none;
-                    color: $black-primary-color;
-
-                    &:hover {
-                        background-color: $color-3-primary;
-                        color: $white-primary-color !important;
-                    }
-
-                    &:active {
-                        transform: scale(0.9) !important;
-                    }
-
-                    &.active {
-                        text-decoration: none;
-                        background-color: $color-3-primary;
-                        color: $white-primary-color !important;
-                    }
-                }
+            @include mobile {
+                gap: 10px;
             }
+
+            @include tablet {
+                gap: 10px;
+            }
+
+            @include tab;
         }
     }
 }

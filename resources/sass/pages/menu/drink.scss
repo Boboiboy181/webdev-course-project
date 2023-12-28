@@ -6,6 +6,11 @@
     height: fit-content;
     justify-content: space-between;
 
+    @include mobile {
+        padding: 50px 80px;
+    }
+
+
     .drink {
         &-item {
             border: 1px solid $color-2-primary;
@@ -19,6 +24,14 @@
             display: flex;
             justify-content: space-between;
             flex-direction: column;
+
+            @include tablet {
+                width: 45%;
+            }
+
+            @include mobile {
+                width: 100%;
+            }
         }
 
         &-img {
@@ -46,6 +59,10 @@
             flex-direction: column;
             justify-content: space-between;
             text-align: center;
+
+            @include mobile {
+                justify-content: unset;
+            }
         }
 
         &-name {

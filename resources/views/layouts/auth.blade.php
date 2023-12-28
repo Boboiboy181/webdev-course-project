@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="{{url('/assets/WizzaLogo.svg')}}"/>
+
+    <title>Wizza - Best Pizza</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"

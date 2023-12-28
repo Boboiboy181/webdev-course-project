@@ -33,12 +33,9 @@ $todayHighlight = array_map('json_decode', array_map('json_encode', $todayHighli
     <h1>Today Highlight !</h1>
     <div class="red-line"></div>
     <div class="products-list">
-        @foreach($todayHighlight as $key => $value)
-            <x-product-card
-                :category="'todayHighlight'"
-                :item="$value"
-            />
+        @foreach ($todayHighlight as $key => $value)
+            <x-product-card :category="'todayHighlight'" :item="$value" />
         @endforeach
     </div>
-    <a href="{{route('pizza.pizzas')}}" class="btn btn-outline-primary see-more">See more</a>
+    <a href="{{ route('pizza.pizzas') }}" class="btn btn-outline-primary see-more">See more</a>
 </div>

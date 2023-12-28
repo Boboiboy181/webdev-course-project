@@ -5,4 +5,18 @@
     &-container {
         padding: 100px 10px;
     }
+
+    @include mobile {
+        &-container {
+            padding: 50px 0;
+            overflow: hidden;
+        }
+    }
+
+    @include tablet {
+        &-container {
+            padding: 50px 0;
+            overflow: hidden;
+        }
+    }
 }

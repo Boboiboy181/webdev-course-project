@@ -7,6 +7,11 @@
     padding: 5px 5px 5px 20px;
     margin-bottom: 15px;
 
+    @include mobile {
+        padding: 5px 5px 5px 10px;
+        gap: 10px;
+    }
+
     input {
         width: 18px;
         height: 18px;

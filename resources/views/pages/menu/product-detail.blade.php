@@ -95,7 +95,7 @@
                     -
                 </button>
                 <label>
-                    <input type="number" class="modal-quantity" value="1" min="1">
+                    <input type="text" class="modal-quantity" value="1" min="1">
                 </label>
                 <button type="button" class="btn btn-secondary btn-secondary-custom modal-btn_increase">
                     +
