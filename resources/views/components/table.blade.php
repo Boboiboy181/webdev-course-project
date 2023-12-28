@@ -15,4 +15,13 @@
         <tr>
             <th>{{$field1}}</th>
             <th>{{$field2}}</th>
-            <th>{{$field3}}
+            <th>{{$field3}}</th>
+            <th>{{$field4}}</th>
+            <th style="width: 215px">Action</th>
+        </tr>
+        </tfoot>
+        <tbody>
+        {!! $slot !!}
+        </tbody>
+    </table>
+</div>
