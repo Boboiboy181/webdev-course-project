@@ -11,13 +11,13 @@
                 fill="black"/>
         </svg>
     </button>
-    <ul class="dropdown-menu">
+    <ul class="dropdown-menu">   
         @auth
             <li class="dropdown-item">
                 <p>Name: {{ auth()->user()->name }}</p>
             </li>
             <li class="dropdown-item">
-                <a class="" href="#">Your profile</a>
+                <a class="" href="#">Your profile </a>
             </li>
 
             @if(Auth::user()->role == 'admin')
@@ -32,14 +32,14 @@
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button type="submit"
-                            class="btn btn-lg btn-danger btn-login fw-bold text-uppercase">Logout
+                            class="btn btn-lg btn-danger btn-login fw-bold text-uppercase ">Logout
                     </button>
                 </form>
             </li>
         @else
             <li class="d-block w-100 text-center">
                 <a role="button"
-                   class="px-6 py-12 btn btn-primary btn-login fw-bold text-uppercase"
+                   class="px-6 py-12 btn btn-primary btn-login fw-bold text-uppercase "
                    href="{{ route('login') }}">Login</a>
             </li>
         @endauth
