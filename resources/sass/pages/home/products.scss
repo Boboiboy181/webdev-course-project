@@ -91,10 +91,10 @@
     }
 
     .see-more {
-        padding: 14px 70px;
+        padding: 15px 40px;
         border-radius: 12px;
         text-decoration: none;
-        font-size: 28px;
+        font-size: 25px;
         font-weight: 700;
         text-align: center;
         margin-top: 50px;
@@ -106,7 +106,7 @@
         color: $color-2-primary;
 
         &:hover {
-            background-color: $color-5-primary;
+            background-color: $color-2-primary;
             color: white;
         }
     }

@@ -3,6 +3,7 @@
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -34,11 +35,24 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/', function () {
         return view('pages.admin.dashboard');
     })->name('admin.dashboard');
-    Route::get('/products', [ProductController::class, 'index'])->name('admin.product');
-    Route::post('/products', [ProductController::class, 'store'])->name('admin.product.store');
-    Route::get('/products/create', [ProductController::class, 'create'])->name('admin.product.create');
-    Route::get('/products/{id}', [ProductController::class, 'show'])->name('admin.product.detail');
-    Route::get('/products/{id}/edit', [ProductController::class, 'edit'])->name('admin.product.edit');
-    Route::patch('/products/{id}', [ProductController::class, 'update'])->name('admin.product.update');
-    Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('admin.product.delete');
+
+    //    Product Controller
+    Route::prefix('products')->group(function () {
+        Route::get('', [ProductController::class, 'index'])->name('admin.product');
+        Route::post('', [ProductController::class, 'store'])->name('admin.product.store');
+        Route::get('/create', [ProductController::class, 'create'])->name('admin.product.create');
+        Route::get('/{id}', [ProductController::class, 'show'])->name('admin.product.detail');
+        Route::get('/{id}/edit', [ProductController::class, 'edit'])->name('admin.product.edit');
+        Route::patch('/{id}', [ProductController::class, 'update'])->name('admin.product.update');
+        Route::delete('/{id}', [ProductController::class, 'destroy'])->name('admin.product.delete');
+    });
+
+    //    User Controller
+    Route::prefix('users')->group(function () {
+        Route::get('/', [UserController::class, 'index'])->name('admin.user');
+        Route::get('/{id}', [UserController::class, 'show'])->name('admin.user.detail');
+        Route::get('/{id}/edit', [UserController::class, 'edit'])->name('admin.user.edit');
+        Route::patch('/{id}', [UserController::class, 'update'])->name('admin.user.update');
+        Route::delete('/{id}', [UserController::class, 'destroy'])->name('admin.user.delete');
+    });
 });
