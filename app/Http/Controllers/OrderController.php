@@ -72,4 +72,17 @@ class OrderController extends Controller
 
         return redirect()->route('admin.order.index');
     }
+
+    public function destroy(string $id)
+    {
+        $order = Order::findOrFail($id);
+
+        if (!$order) {
+            return response()->json(['message' => 'Order not found'], 404);
+        }
+
+        $order->delete();
+
+        return redirect()->route('admin.order.index');
+    }
 }
