@@ -1,4 +1,5 @@
 <div class="dropdown">
+
     <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
             aria-expanded="false">
         <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
@@ -11,6 +12,7 @@
                 fill="black"/>
         </svg>
     </button>
+
     <ul class="dropdown-menu">   
         @auth
             <li class="dropdown-item">
@@ -25,9 +27,7 @@
                     <a class="" href="{{ route('admin.dashboard') }}">Dashboard</a>
                 </li>
             @endif
-
             <hr>
-
             <li class="dropdown-item">
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
