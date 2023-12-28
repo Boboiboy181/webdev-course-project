@@ -3,7 +3,7 @@
         {{-- Start Right Nav --}}
         <div class="col-10">
             <ul class="nav justify-content-left">
-                <li><a class="navbar-brand" href="{{ route('pizza.home') }}">
+                <li><a class="navbar-brand" href="/">
                         <img src="{{ url('/assets/Logo.png') }}" alt="Logo" width="50" height="32"
                              class="d-inline-block">
                     </a></li>

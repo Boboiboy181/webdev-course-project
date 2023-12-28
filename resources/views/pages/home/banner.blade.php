@@ -1,5 +1,5 @@
 <div class="mb-5 banner-container d-flex align-items-center justify-content-center">
-    <div id="carouselExampleIndicators" style=" max-width: 1040px; max-height: 585px"
+    <div id="carouselExampleIndicators" style="max-width: 1200px; max-height: 675px"
          class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
         <!-- Phần các chỉ số -->
         <div class=" dots-container carousel-indicators">
@@ -13,13 +13,13 @@
         <!-- Phần bao các slides -->
         <div class="carousel-inner" style="border-radius: 23px;">
             <div class="carousel-item active">
-                <img src="{{url('/assets/banner.png')}}" alt="...">
+                <img src="{{url('/assets/1.png')}}" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="{{url('/assets/banner.png')}}" alt="...">
+                <img src="{{url('/assets/2.png')}}" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="{{url('/assets/banner.png')}}" alt="...">
+                <img src="{{url('/assets/3.png')}}" alt="...">
             </div>
         </div>
         <!-- Phần điều khiển trái phải -->

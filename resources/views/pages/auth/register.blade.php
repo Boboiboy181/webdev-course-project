@@ -37,6 +37,18 @@
                                 @enderror
                             </div>
                             <div class="form-floating mb-3">
+                                <input type="text" class="form-control
+                                       @error('phone') is-invalid @enderror"
+                                       id="floatingInputPhone"
+                                       placeholder="0123456789" name="phone" required>
+                                <label for="floatingInputPhone">Phone number</label>
+                                @error('phone')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{$message}}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            <div class="form-floating mb-3">
                                 <input type="password" class="form-control
                                        @error('password') is-invalid @enderror"
                                        id="floatingPassword"

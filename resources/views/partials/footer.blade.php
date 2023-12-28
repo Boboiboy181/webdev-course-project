@@ -8,15 +8,23 @@
             <table class="footer-content-right">
                 <tr>
                     <td class="ft-list"><a href="https://pizza4ps.com/vn/vision/#companyInfo">Company Profile</a></td>
-                    <td class="ft-menu">Follow Us!</td>
+                    <td class="ft-menu fw-semibold">Follow Us!</td>
                 </tr>
                 <tr>
                     <td class="ft-list"><a href="https://pizza4ps.com/vn/policy/">Privacy Policy</a></td>
                     <td class="ft-menu">
-                        <img class="socialmedia" src="{{ url('/assets/facebook.png') }}" alt="Facebook logo">
-                        <img class="socialmedia" src="{{ url('/assets/instagram.png') }}" alt="Instagram logo">
-                        <img class="socialmedia" src="{{ url('/assets/linkedin.png') }}" alt="Linkedin logo">
-                        <img id="youtube" src="{{ url('/assets/vector.png') }}" alt="Youtube logo">
+                        <a>
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a>
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a>
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
                     </td>
                 </tr>
                 <tr>
