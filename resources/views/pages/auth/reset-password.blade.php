@@ -49,7 +49,7 @@
                             <div class="d-grid mb-2">
                                 <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase btn-auth"
                                         type="submit">
-                                    Login
+                                    Submit
                                 </button>
                             </div>
                             <div>
