@@ -19,6 +19,10 @@ class OrderController extends Controller
     {
         $order = Order::findOrFail($id);
 
+        if (!$order) {
+            return response()->json(['message' => 'Order not found'], 404);
+        }
+
         return view('pages.admin.order.order-detail', ['order' => $order]);
     }
 
@@ -48,6 +52,10 @@ class OrderController extends Controller
     {
         $order = Order::findOrFail($id);
 
+        if (!$order) {
+            return response()->json(['message' => 'Order not found'], 404);
+        }
+
         return view('pages.admin.order.order-edit', ['order' => $order]);
     }
 
@@ -65,6 +73,10 @@ class OrderController extends Controller
     public function destroy(string $id)
     {
         $order = Order::findOrFail($id);
+
+        if (!$order) {
+            return response()->json(['message' => 'Order not found'], 404);
+        }
 
         $order->delete();
 

@@ -12,15 +12,14 @@
                         <h5 class="card-title mb-5 fw-light fs-2 auth-title text-start">
                             You must verify your email address, please check your email for a verification
                             link</h5>
-                        @if(session('status'))
+                        @if (session('status'))
                             <div class="alert alert-success" role="alert">
-                                {{session('status')}}
+                                {{ session('status') }}
                             </div>
                         @endif
-                        <form action="{{route('verification.send')}}" method="post">
+                        <form action="{{ route('verification.send') }}" method="post">
                             @csrf
-                            <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase btn-auth"
-                                    type="submit">
+                            <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase btn-auth" type="submit">
                                 Resend Verification Email
                             </button>
                         </form>

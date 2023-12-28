@@ -10,42 +10,42 @@
                     </div>
                     <div class="card-body p-4 p-sm-5">
                         <h5 class="card-title text-center mb-5 fw-light fs-1 auth-title">Welcome Back</h5>
-                        <form action="{{route('login')}}" method="post">
+                        <form action="{{ route('login') }}" method="post">
                             @csrf
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control
+                                <input type="email"
+                                    class="form-control
                                        @error('email') is-invalid @enderror"
-                                       id="floatingInputEmail"
-                                       placeholder="name@example.com" name="email" required>
+                                    id="floatingInputEmail" placeholder="name@example.com" name="email" required>
                                 <label for="floatingInputEmail">Email address</label>
                                 @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{$message}}</strong>
-                                </span>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
                                 @enderror
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="password" class="form-control
+                                <input type="password"
+                                    class="form-control
                                        @error('password') is-invalid @enderror"
-                                       id="floatingPassword"
-                                       placeholder="Password" name="password" required>
+                                    id="floatingPassword" placeholder="Password" name="password" required>
                                 <label for="floatingPassword">Password</label>
                                 @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{$message}}</strong>
-                                </span>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
                                 @enderror
                             </div>
                             <div class="d-grid mb-2">
                                 <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase btn-auth"
-                                        type="submit">
+                                    type="submit">
                                     Login
                                 </button>
                             </div>
                             <div>
-                                <a class="d-block text-center mt-3 small fs-5" href="{{route('register')}}">Don't have
+                                <a class="d-block text-center mt-3 small fs-5" href="{{ route('register') }}">Don't have
                                     an account ?</a>
-                                <a class="d-block text-center mt-3 small fs-5" href="{{route('password.request')}}">Forgot
+                                <a class="d-block text-center mt-3 small fs-5" href="{{ route('password.request') }}">Forgot
                                     password?</a>
                             </div>
                         </form>
