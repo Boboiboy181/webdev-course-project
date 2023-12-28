@@ -58,32 +58,4 @@ class OrderController extends Controller
 
         return view('pages.admin.order.order-edit', ['order' => $order]);
     }
-
-    public function update(UpdateOrderRequest $request, string $id)
-    {
-        $order = Order::findOrFail($id);
-
-        if (!$order) {
-            return response()->json(['message' => 'Order not found'], 404);
-        }
-
-        $data = $request->validated();
-
-        $order->update($data);
-
-        return redirect()->route('admin.order.detail', ['id' => $id])->with('success', 'Order updated successfully');
-    }
-
-    public function destroy(string $id)
-    {
-        $order = Order::findOrFail($id);
-
-        if (!$order) {
-            return response()->json(['message' => 'Order not found'], 404);
-        }
-
-        $order->delete();
-
-        return redirect()->route('admin.order')->with('success', 'Order deleted successfully');
-    }
 }
