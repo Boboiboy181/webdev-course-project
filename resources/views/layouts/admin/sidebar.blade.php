@@ -12,30 +12,30 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-        <a class="nav-link" href="">
+    <li class="nav-item {{ Route::is('admin.dashboard') ? 'active' : '' }}">
+        <a class="nav-link" href="{{route('admin.dashboard')}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
         </a>
     </li>
 
-    <li class="nav-item">
-        <a class="nav-link" href="">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+    <li class="nav-item {{ Route::is('admin.product') ? 'active' : '' }}">
+        <a class="nav-link" href="{{route('admin.product')}}">
+            <i class="fas fa-fw fa-table"></i>
             <span>Product</span>
         </a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-fw fa-table"></i>
             <span>User</span>
         </a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-fw fa-table"></i>
             <span>Order</span>
         </a>
     </li>
