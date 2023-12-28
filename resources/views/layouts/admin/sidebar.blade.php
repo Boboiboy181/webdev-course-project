@@ -1,4 +1,4 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-custom sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
@@ -19,7 +19,7 @@
         </a>
     </li>
 
-    <li class="nav-item {{ Route::is('admin.product') ? 'active' : '' }}">
+    <li class="nav-item {{ Str::startsWith(request()->route()->getName(), 'admin.product') ? 'active' : '' }}">
         <a class="nav-link" href="{{route('admin.product')}}">
             <i class="fas fa-fw fa-table"></i>
             <span>Product</span>

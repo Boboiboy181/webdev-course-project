@@ -3,6 +3,7 @@
     'data2',
     'data3',
     'data4',
+    'detailUrl'
 ])
 
 <tr>
@@ -11,8 +12,6 @@
     <td>{{ number_format($data3, 0, ',', ',') }} VNĐ</td>
     <td>{{$data4}}</td>
     <td>
-        <button class="btn btn-info">Detail</button>
-        <button class="btn btn-success">Update</button>
-        <button class="btn btn-danger">Delete</button>
+        <a href="{{$detailUrl}}" class="btn btn-info">Detail</a>
     </td>
 </tr>
