@@ -10,7 +10,7 @@
             <div>
                 <button data-id="{{ $item->_id }}" class="decrement-btn">-</button>
                 <label>
-                    <input class="cart-quantity" type="number" value="{{ $item->quantity }}">
+                    <input class="cart-quantity" type="text" value="{{ $item->quantity }}">
                 </label>
                 <button data-id="{{ $item->_id }}" class="increment-btn">+</button>
             </div>

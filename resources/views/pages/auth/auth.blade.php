@@ -1,47 +1,49 @@
 <div class="dropdown">
-
-    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-        <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
-             xmlns="http://www.w3.org/2000/svg">
+    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M20.5227 21C24.3009 21 27.3636 17.866 27.3636 14C27.3636 10.134 24.3009 7 20.5227 7C16.7446 7 13.6818 10.134 13.6818 14C13.6818 17.866 16.7446 21 20.5227 21Z"
-                fill="black"/>
+                fill="black" />
             <path
                 d="M20.5227 24.5C10.0903 24.5 6.84091 31.5 6.84091 31.5V35H34.2045V31.5C34.2045 31.5 30.9551 24.5 20.5227 24.5Z"
-                fill="black"/>
+                fill="black" />
         </svg>
     </button>
+    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+        @if (auth()->check())
+            <a class="dropdown-item fw-normal" href="#">
+                Hello,
+                {{ auth()->user()->name }}
+            </a>
+            <a class="dropdown-item fw-normal" href="#">
+                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                Your Profile
+            </a>
 
-    <ul class="dropdown-menu">   
-        @auth
-            <li class="dropdown-item">
-                <p>Name: {{ auth()->user()->name }}</p>
-            </li>
-            <li class="dropdown-item">
-                <a class="" href="#">Your profile </a>
-            </li>
-
-            @if(Auth::user()->role =='admin')
-                <li class="dropdown-item">
-                    <a class="" href="{{ route('admin.dashboard') }}">Dashboard</a>
-                </li>
+            @if (auth()->user()->role == 'admin')
+                <a class="dropdown-item fw-normal" href="{{ route('admin.dashboard') }}">
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Dashboard
+                </a>
             @endif
-            <hr>
-            <li class="dropdown-item">
-                <form action="{{ route('logout') }}" method="POST">
-                    @csrf
-                    <button type="submit"
-                            class="btn btn-lg btn-danger btn-login fw-bold text-uppercase ">Logout
-                    </button>
-                </form>
-            </li>
+
+            <div class="dropdown-divider"></div>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button class="dropdown-item fw-normal" type="submit">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Logout
+                </button>
+            </form>
         @else
-            <li class="d-block w-100 text-center">
-                <a role="button"
-                   class="px-6 py-12 btn btn-primary btn-login fw-bold text-uppercase "
-                   href="{{ route('login') }}">Login</a>
-            </li>
-        @endauth
-    </ul>
+            <a class="dropdown-item fw-normal" href="{{ route('login') }}">
+                <i class="fas fa-sign-in-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                Login
+            </a>
+            <a class="dropdown-item fw-normal" href="{{ route('register') }}">
+                <i class="fas fa-user-plus fa-sm fa-fw mr-2 text-gray-400"></i>
+                Register
+            </a>
+        @endif
+    </div>
 </div>
