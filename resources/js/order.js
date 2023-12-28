@@ -31,7 +31,7 @@ btnCreateOrder?.addEventListener('click', async function (e) {
 
     const order = {
         customer: {
-            id: customerInfo?.id || '',
+            id: customerInfo?._id || '',
             name: customerInfo?.fullName,
             phone: customerInfo?.phone,
         },

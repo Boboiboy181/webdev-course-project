@@ -20,15 +20,6 @@ class StoreOrderRequest extends FormRequest
      *
      * @return array<string, ValidationRule|array|string>
      */
-    //'customer',
-    //'items',
-    //'total_price',
-    //'note',
-    //'address',
-    //'status',
-    //'payment_method',
-    //'payment_status',
-
     public function rules(): array
     {
         return [

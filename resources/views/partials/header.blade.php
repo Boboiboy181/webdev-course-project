@@ -7,7 +7,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="/">
-                <img src="{{ url('/assets/Logo.png') }}" alt="Logo" width="50" height="32"
+                <img src="{{ url('/assets/WizzaLogo.svg') }}" alt="Logo" width="60" height="60"
                      class="d-inline-block"></a>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -23,7 +23,7 @@
                 </ul>
                 <ul class="navbar-nav nav-right">
                     <li class="nav-item">
-                        <a href="#">TRACKING</a>
+                        <a href="{{route('pizza.track-order')}}">TRACKING</a>
                     </li>
                     @include('pages.auth.auth')
                     <li class="nav-item">

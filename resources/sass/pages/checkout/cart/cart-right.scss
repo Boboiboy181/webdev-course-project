@@ -8,6 +8,11 @@
         border-left: none;
         padding: 25px 25px 25px;
     }
+
+    @include tablet {
+        padding: 25px 25px 25px;
+        border-left: none;
+    }
 }
 
 h1 {
@@ -53,6 +58,12 @@ h1 {
 
     @include mobile {
         margin-top: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    @include tablet {
+        margin-top: 30px;
         text-align: center;
         width: 100%;
     }

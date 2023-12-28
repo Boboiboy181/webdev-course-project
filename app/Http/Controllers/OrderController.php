@@ -26,7 +26,13 @@ class OrderController extends Controller
     {
         $data = $request->validated();
         $data['status'] = 'pending';
-        $data['payment_status'] = 'not paid';
+
+        if ($request->payment_method === 'cash') {
+            $data['payment_status'] = 'paid';
+        } else {
+            $data['payment_status'] = 'not paid';
+        }
+
         $data['order_code'] = AutoCodeController::generateOrderCode();
 
         $order = Order::query()->create($data);

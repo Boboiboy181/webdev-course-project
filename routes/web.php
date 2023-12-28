@@ -4,6 +4,7 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TrackOrderController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,9 +16,13 @@ Route::get('/home', function () {
     return view('pages.home.home');
 })->name('pizza.home')->middleware(['auth', 'verified']);
 
-// Order Controller
 Route::prefix('orders')->group(function () {
     Route::post('/', [OrderController::class, 'store'])->name('order.store');
+});
+
+Route::prefix('/track-order')->group(function () {
+    Route::get('/', [TrackOrderController::class, 'index'])->name('pizza.track-order');
+    Route::get('/{id}', [TrackOrderController::class, 'show'])->name('pizza.track-order.detail');
 });
 
 Route::prefix('/menu')->group(function () {

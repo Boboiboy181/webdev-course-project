@@ -18,6 +18,11 @@
             font-size: 30px;
             margin-bottom: 5px;
         }
+
+        @include tablet {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
     }
 
     .red-line {
@@ -46,6 +51,10 @@
             padding: 0 20px;
         }
 
+        @include tablet {
+            gap: 20px;
+        }
+
         .todayHighlight {
             &-item {
                 border: 1px solid $color-2-primary;
@@ -59,6 +68,10 @@
 
                 @include mobile {
                     width: 100%;
+                }
+
+                @include tablet {
+                    width: 48%;
                 }
             }
 
@@ -130,6 +143,12 @@
         color: $color-2-primary;
 
         @include mobile {
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+        @include tablet {
             font-size: 20px;
             padding: 10px 20px;
             border-radius: 8px;

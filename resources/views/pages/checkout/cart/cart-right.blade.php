@@ -60,7 +60,7 @@
                 <h1 class="modal-title fs-2" id="exampleModalLabel">Confirmation</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body fs-2">Select "Update" below if you want to make this change.</div>
+            <div class="modal-body fs-2">Select "Confirm" below if you want to make this order.</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary fs-2" data-bs-dismiss="modal">Close</button>
                 <form method="POST" action="{{route('order.store')}}" id="order-form">

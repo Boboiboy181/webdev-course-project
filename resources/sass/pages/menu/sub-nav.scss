@@ -71,6 +71,11 @@
             margin: 15px 10px 0;
         }
 
+        @include tablet {
+            overflow-x: scroll;
+            margin: 15px 10px 0;
+        }
+
         ul {
             border-radius: 33px;
             display: flex;
@@ -81,6 +86,10 @@
             padding: 15px 0;
 
             @include mobile {
+                gap: 10px;
+            }
+
+            @include tablet {
                 gap: 10px;
             }
 

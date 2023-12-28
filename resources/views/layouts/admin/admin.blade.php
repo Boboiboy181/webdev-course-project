@@ -8,7 +8,7 @@
     <meta name="author" content="">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="https://vitejs.dev/logo.svg"/>
+    <link rel="shortcut icon" type="image/png" href="{{url('/assets/WizzaLogo.svg')}}"/>
 
     <title>Wizza - Dashboard</title>
     <!-- Custom fonts for this template-->

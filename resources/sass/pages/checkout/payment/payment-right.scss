@@ -6,6 +6,10 @@
     @include mobile {
         border-left: none;
     }
+
+    @include tablet {
+        border-left: none;
+    }
 }
 
 .payment-title {

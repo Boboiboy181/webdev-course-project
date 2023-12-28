@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="https://vitejs.dev/logo.svg"/>
+    <link rel="shortcut icon" type="image/png" href="{{url('/assets/WizzaLogo.svg')}}"/>
 
     <title>Wizza - Best Pizza</title>
 
@@ -24,7 +24,7 @@
     @include('partials.back-to-top')
     @include('partials.header')
     @yield('content')
-    @if (!request()->is('menu*'))
+    @if (!request()->is('menu*', 'track-order'))
         @include('partials.footer')
     @endif
     <x-modal/>
