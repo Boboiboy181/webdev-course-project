@@ -28,9 +28,9 @@ class OrderController extends Controller
         $data['status'] = 'pending';
 
         if ($request->payment_method === 'cash') {
-            $data['payment_status'] = 'paid';
-        } else {
             $data['payment_status'] = 'not paid';
+        } else {
+            $data['payment_status'] = 'paid';
         }
 
         $data['order_code'] = AutoCodeController::generateOrderCode();
