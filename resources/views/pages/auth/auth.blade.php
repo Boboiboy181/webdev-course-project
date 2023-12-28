@@ -22,7 +22,7 @@
                 <a class="" href="#">Your profile </a>
             </li>
 
-            @if(Auth::user()->role == 'admin')
+            @if(Auth::user()->role =='admin')
                 <li class="dropdown-item">
                     <a class="" href="{{ route('admin.dashboard') }}">Dashboard</a>
                 </li>
