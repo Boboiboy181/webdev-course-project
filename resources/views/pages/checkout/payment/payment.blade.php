@@ -9,7 +9,7 @@
         </div>
         <div class="col-6 payment-right">
             @include('pages.checkout.payment.payment-right')
-            @include('pages.checkout.cart.cart-right', ['data' => $data])
+            @include('pages.checkout.cart.cart-right', ['data' => $data, 'route' => 'cart.thank-you'])
         </div>
     </div>
 @endsection

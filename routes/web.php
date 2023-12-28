@@ -1,13 +1,16 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use \App\Http\Controllers\MenuController;
 use App\Http\Controllers\CheckoutController;
-use App\Http\Controllers\AuthController;
+use App\Http\Controllers\MenuController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('pages.home.home');
 })->name('pizza.home');
+
+Route::get('/home', function () {
+    return view('pages.home.home');
+})->name('pizza.home')->middleware(['auth', 'verified']);
 
 Route::prefix('/menu')->group(function () {
     Route::get('/pizzas', [MenuController::class, 'pizzasView'])->name('pizza.pizzas');
@@ -23,6 +26,11 @@ Route::prefix('/menu')->group(function () {
 Route::prefix('/cart')->group(function () {
     Route::get('/', [CheckoutController::class, 'index'])->name('cart.index');
     Route::get('/payment', [CheckoutController::class, 'showPayment'])->name('cart.payment');
+    Route::get('/thank-you', [CheckoutController::class, 'showThankYou'])->name('cart.thank-you');
 });
 
-Route::resource('/auth', AuthController::class);
+Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
+    Route::get('/', function () {
+        return view('pages.admin.dashboard');
+    })->name('admin.dashboard');
+});

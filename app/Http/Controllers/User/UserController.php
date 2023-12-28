@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User;
 
-class AuthController extends Controller
+use App\Http\Controllers\Controller;
+
+class UserController extends Controller
 {
     public function index()
     {

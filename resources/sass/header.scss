@@ -39,3 +39,28 @@
     background-color: white;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
+
+.dropdown-toggle {
+    border: none !important;
+    background-color: $body-bg !important;
+}
+
+.dropdown-menu {
+    background-color: $body-bg !important;
+    padding: 10px;
+}
+
+.dropdown-item {
+    text-align: center;
+    color: $black-primary-color !important;
+    font-size: 2rem !important;
+
+    a {
+        font-weight: unset;
+    }
+
+    &:active {
+        background-color: $body-bg !important;
+        color: $color-2-primary !important;
+    }
+}
