@@ -33,8 +33,8 @@
         </a>
     </li>
 
-    <li class="nav-item">
-        <a class="nav-link" href="">
+    <li class="nav-item {{ Str::startsWith(request()->route()->getName(), 'admin.order') ? 'active' : '' }}">
+        <a class="nav-link" href="{{route('admin.order')}}">
             <i class="fas fa-fw fa-table"></i>
             <span>Order</span>
         </a>

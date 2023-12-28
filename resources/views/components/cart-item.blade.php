@@ -14,13 +14,14 @@
                 </label>
                 <button data-id="{{ $item->_id }}" class="increment-btn">+</button>
             </div>
+            <p>Price: <span>{{ number_format($item->price, 0, ',', ',') }}</span>đ</p>
             @isset($item->size)
                 <p>Size: {{ $item->size }}</p>
                 <p>Crust: {{ $item->crust }}</p>
                 <p>Bonus: {{ $item->cheese }}</p>
             @endisset
-            <p>Action:
-                <span class="btn-delete" data-id="{{ $item->_id }}" data-url="{{ url()->current() }}">
+            <p class="btn-action fs-3">Action:
+                <span class="btn-delete fs-3" data-id="{{ $item->_id }}" data-url="{{ url()->current() }}">
                     <i class="fa-regular fa-trash">
                     </i>
                 </span>
@@ -29,6 +30,6 @@
     </div>
     <div class="cart-item-price">
         <p>Total</p>
-        <p><span>{{ number_format($item->price, 0, ',', ',') }}</span>đ</p>
+        <p><span class="total-item-price">xxx xxx xxx</span>đ</p>
     </div>
 </div>

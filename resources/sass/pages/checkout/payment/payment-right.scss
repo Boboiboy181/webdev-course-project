@@ -2,6 +2,14 @@
     border-left: 2px solid;
     border-color: #4E8B00;
     padding: 0 35px 35px;
+
+    @include mobile {
+        border-left: none;
+    }
+
+    @include tablet {
+        border-left: none;
+    }
 }
 
 .payment-title {

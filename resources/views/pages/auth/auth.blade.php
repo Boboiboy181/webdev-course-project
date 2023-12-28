@@ -10,7 +10,7 @@
         </svg>
     </button>
     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-        @if (auth()->check())
+        @if( auth()->check() )
             <a class="dropdown-item fw-normal" href="#">
                 Hello,
                 {{ auth()->user()->name }}
@@ -20,15 +20,15 @@
                 Your Profile
             </a>
 
-            @if (auth()->user()->role == 'admin')
-                <a class="dropdown-item fw-normal" href="{{ route('admin.dashboard') }}">
+            @if(auth()->user()->role == 'admin')
+                <a class="dropdown-item fw-normal" href="{{route('admin.dashboard')}}">
                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                     Dashboard
                 </a>
             @endif
 
             <div class="dropdown-divider"></div>
-            <form action="{{ route('logout') }}" method="POST">
+            <form action="{{route('logout')}}" method="POST">
                 @csrf
                 <button class="dropdown-item fw-normal" type="submit">
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -36,14 +36,15 @@
                 </button>
             </form>
         @else
-            <a class="dropdown-item fw-normal" href="{{ route('login') }}">
+            <a class="dropdown-item fw-normal" href="{{route('login')}}">
                 <i class="fas fa-sign-in-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                 Login
             </a>
-            <a class="dropdown-item fw-normal" href="{{ route('register') }}">
+            <a class="dropdown-item fw-normal" href="{{route('register')}}">
                 <i class="fas fa-user-plus fa-sm fa-fw mr-2 text-gray-400"></i>
                 Register
             </a>
         @endif
     </div>
 </div>
+

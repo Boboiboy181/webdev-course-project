@@ -17,10 +17,8 @@
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-3">
-                        <img class="img-profile rounded-circle mb-2"
-                             src=" https://startbootstrap.github.io/startbootstrap-sb-admin-2/img/undraw_profile.svg"
-                             alt="Logo"/>
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-user-secret" style="font-size: 10em; color: black;"></i>
                     </div>
                     <div class="col-md-9">
                         <h3 class="font-weight-bold text-primary">{{$user->name}}</h3>

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="{{url('/assets/WizzaLogo.svg')}}"/>
+
     <title>Wizza - Dashboard</title>
     <!-- Custom fonts for this template-->
     <link
@@ -18,6 +22,10 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('https://startbootstrap.github.io/startbootstrap-sb-admin-2/css/sb-admin-2.min.css') }}"
           rel="stylesheet">
+
+    <link
+        href="https://site-assets.fontawesome.com/releases/v6.1.2/css/all.css?fbclid=IwAR2Leèv1ZTLJsKEsnl4HGMf5XRZuPqx5yOFnFaOFbVgCiCeU87S0up6ptKU"
+        rel="stylesheet">
 
     @yield('custome-styles')
     @vite('resources/js/admin.js')

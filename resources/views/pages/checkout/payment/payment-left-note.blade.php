@@ -1,4 +1,4 @@
-<label for="addnote"></label>
+<label for="note"></label>
 <textarea
     style="
         margin-top: 30px;
@@ -8,10 +8,11 @@
         border-radius: 8px;
         border: 2px solid #DC4D01;
         background: rgba(255, 210, 48, 0.22);
-        font-size: 1.6rem"
+        font-size: 1.6rem;
+        padding: 10px"
     name="addnote"
-    id="addnote"
+    id="note"
     cols="10"
-    rows="10">
-    Add your note here
+    rows="10"
+    placeholder="Add your note here">
 </textarea>

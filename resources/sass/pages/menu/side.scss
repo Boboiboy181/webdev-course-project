@@ -2,6 +2,11 @@
     padding: 100px 80px;
     height: fit-content;
 
+    @include mobile {
+        padding: 50px 80px;
+    }
+
+
     .side {
         &-list {
             display: flex;
@@ -19,6 +24,10 @@
             line-height: normal;
             margin-bottom: 30px;
             color: $color-1-primary;
+
+            @include mobile {
+                font-size: 3rem;
+            }
         }
 
         &-item {
@@ -33,6 +42,14 @@
             display: flex;
             justify-content: space-between;
             flex-direction: column;
+
+            @include tablet {
+                width: 45%;
+            }
+
+            @include mobile {
+                width: 100%;
+            }
         }
 
         &-img {
@@ -61,6 +78,10 @@
             justify-content: space-between;
             text-align: center;
             color: $color-4-primary;
+
+            @include mobile {
+                justify-content: unset;
+            }
         }
 
         &-name {
