@@ -6,6 +6,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TrackOrderController;
 use App\Http\Controllers\User\UserController;
+use App\Models\Order;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -44,7 +45,17 @@ Route::prefix('/cart')->group(function () {
 
 Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/', function () {
-        return view('pages.admin.dashboard');
+        $orders_paid = Order::where('payment_status', 'paid')->get();
+
+        $total_revenue = 0;
+        foreach ($orders_paid as $order) {
+            $total_revenue += $order->total_price;
+        }
+
+        // order status pending
+        $orders_pending = Order::where('status', 'pending')->get();
+
+        return view('pages.admin.dashboard', ['total_revenue' => $total_revenue, 'orders_pending' => count($orders_pending)]);
     })->name('admin.dashboard');
 
     //    Product Controller
