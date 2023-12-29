@@ -1,7 +1,6 @@
 import "./bootstrap";
 
 import "../sass/app.scss";
-import './splash_fade';
 
 import "./checkout-input.js";
 import "./cart.js";
