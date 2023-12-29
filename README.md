@@ -9,7 +9,7 @@
 
 ## Course project of Web Development IS207
 
-## Link Design
+### Link Design
 
 - [Figma](https://www.figma.com/file/IyYh2PYsTNC3KyGn2tyIAv/F%26B-Pizza-Website?type=design&node-id=0-1&mode=design&t=gn9y1MudKoziQWrl-0)
 
@@ -22,14 +22,14 @@
 -   Tran Tinh Minh Tu - 21521619
 -   Nguyen Dang Hoang Ha - 21520801
 
-## How to run
+### How to run
 
 -   Clone this repo
 -   Run `composer install`
 -   Run `npm install`
 -   Run `npm run dev` and `php artisan serve` (same time)
 
-## Admin account
+### Admin account
 
 -   Email: haidao549@gmail.com
 -   Password: 12345678
