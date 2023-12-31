@@ -19,7 +19,7 @@ class OrderController extends Controller
     {
         $order = Order::findOrFail($id);
 
-        if (!$order) {
+        if (! $order) {
             return response()->json(['message' => 'Order not found'], 404);
         }
 
@@ -52,17 +52,18 @@ class OrderController extends Controller
     {
         $order = Order::findOrFail($id);
 
-        if (!$order) {
+        if (! $order) {
             return response()->json(['message' => 'Order not found'], 404);
         }
 
         return view('pages.admin.order.order-edit', ['order' => $order]);
     }
 
-    public function update(UpdateOrderRequest $request, string $id) {
+    public function update(UpdateOrderRequest $request, string $id)
+    {
         $order = Order::findOrFail($id);
 
-        if (!$order) {
+        if (! $order) {
             return response()->json(['message' => 'Order not found'], 404);
         }
 
@@ -77,7 +78,7 @@ class OrderController extends Controller
     {
         $order = Order::findOrFail($id);
 
-        if (!$order) {
+        if (! $order) {
             return response()->json(['message' => 'Order not found'], 404);
         }
 
