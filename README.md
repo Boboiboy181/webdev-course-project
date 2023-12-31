@@ -24,15 +24,24 @@
 
 ### How to run
 
+-   Install php and composer on your device
+-   Install mongodb driver from this [link](https://github.com/mongodb/mongo-php-driver)
 -   Clone this repo
 -   Run `composer install`
 -   Run `npm install`
+-   Update your `.env` with your key in the `.env.example`
 -   Run `npm run dev` and `php artisan serve` (same time)
 
 ### Admin account
 
 -   Email: haidao549@gmail.com
 -   Password: 12345678
+
+### Things to-do
+
+-   Fix a small bug in creating a pizza in admin :)
+-   Code responsive for table size and make the responsive look
+-   Add some cool features like intergrating google maps,...
 
 ## License
 
