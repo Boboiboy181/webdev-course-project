@@ -10,7 +10,9 @@ class CheckoutController extends Controller
     {
         $data = $request->cookie('cartItems');
 
-        if (! count(json_decode($data))) {
+        //        dd($data);
+
+        if ($data === null || ! count(json_decode($data))) {
             return redirect()->route('pizza.pizzas');
         }
 

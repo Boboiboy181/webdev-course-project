@@ -20,7 +20,7 @@
                 <p>Crust: {{ $item->crust }}</p>
                 <p>Bonus: {{ $item->cheese }}</p>
             @endisset
-            <p class="btn-action fs-3">Action:
+            <p class="btn-action fs-3" style="font-weight: 500">Action:
                 <span class="btn-delete fs-3" data-id="{{ $item->_id }}" data-url="{{ url()->current() }}">
                     <i class="fa-regular fa-trash">
                     </i>

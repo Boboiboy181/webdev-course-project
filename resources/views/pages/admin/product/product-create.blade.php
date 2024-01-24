@@ -13,14 +13,14 @@
                     </div>
                     <div class="col-md-9">
                         <form id="form-submit" method="POST" action="{{ route('admin.product.store') }}"
-                            enctype="multipart/form-data">
+                              enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" class="form-control @error('name') is-invalid @enderror"
-                                    id="name" name="name" placeholder="Enter product name" required>
+                                       id="name" name="name" placeholder="Enter product name" required>
                                 @error('name')
-                                    <span class="invalid-feedback" role="alert">
+                                <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -28,9 +28,9 @@
                             <div class="form-group">
                                 <label for="price">Price</label>
                                 <input type="number" class="form-control @error('price') is-invalid @enderror"
-                                    id="price" name="price" placeholder="Enter product price" required>
+                                       id="price" name="price" placeholder="Enter product price" required>
                                 @error('price')
-                                    <span class="invalid-feedback" role="alert">
+                                <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -38,9 +38,9 @@
                             <div class="form-group">
                                 <label for="desc">Description</label>
                                 <input type="text" class="form-control @error('desc') is-invalid @enderror"
-                                    id="desc" name="desc" placeholder="Enter product description" required>
+                                       id="desc" name="desc" placeholder="Enter product description" required>
                                 @error('desc')
-                                    <span class="invalid-feedback" role="alert">
+                                <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -48,14 +48,14 @@
                             <div class="form-group">
                                 <label for="category">Category</label>
                                 <select class="form-control @error('category') is-invalid @enderror" id="category"
-                                    name="category" required>
+                                        name="category" required>
                                     <option value="pizza">Pizza</option>
                                     <option value="side">Side</option>
                                     <option value="dessert">Dessert</option>
                                     <option value="drink">Drink</option>
                                 </select>
                                 @error('category')
-                                    <span class="invalid-feedback" role="alert">
+                                <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -63,10 +63,11 @@
 
                             <div id="additional-pizza">
                                 <div class="form-group">
-                                    <label for="additionalProperties[variant]">Variant</label>
+                                    <label for="pizza-variant">Variant</label>
                                     <select
                                         class="form-control @error('additionalProperties[variant]') is-invalid @enderror"
-                                        id="additionalProperties[variant]" name="additionalProperties[variant]" required>
+                                        id="pizza-variant" name="additionalProperties[variant]"
+                                        required>
                                         <option value="flavors of the world">
                                             Flavors Of The World
                                         </option>
@@ -84,16 +85,17 @@
                                         </option>
                                     </select>
                                     @error('additionalProperties[variant]')
-                                        <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="additionalProperties[topping]">Topping</label>
+                                    <label for="pizza-topping">Topping</label>
                                     <select
                                         class="form-control @error('additionalProperties[topping]') is-invalid @enderror"
-                                        id="additionalProperties[topping]" name="additionalProperties[topping]" required>
+                                        id="pizza-topping" name="additionalProperties[topping]"
+                                        required>
                                         <option value="Seafood">
                                             Seafood
                                         </option>
@@ -111,7 +113,7 @@
                                         </option>
                                     </select>
                                     @error('additionalProperties[topping]')
-                                        <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
@@ -120,10 +122,11 @@
 
                             <div id="additional-side" style="display: none">
                                 <div class="form-group">
-                                    <label for="additionalProperties[variant]">Variant</label>
+                                    <label for="side-variant">Variant</label>
                                     <select
                                         class="form-control @error('additionalProperties[variant]') is-invalid @enderror"
-                                        id="additionalProperties[variant]" name="additionalProperties[variant]" required>
+                                        id="side-variant"
+                                        required>
                                         <option value="Potato">
                                             Potato
                                         </option>
@@ -141,16 +144,17 @@
                                         </option>
                                     </select>
                                     @error('additionalProperties[variant]')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="additionalProperties[topping]">Topping</label>
+                                    <label for="side-topping">Topping</label>
                                     <select
                                         class="form-control @error('additionalProperties[topping]') is-invalid @enderror"
-                                        id="additionalProperties[topping]" name="additionalProperties[topping]" required>
+                                        id="side-topping"
+                                        required>
                                         <option value="Seafood">
                                             Seafood
                                         </option>
@@ -168,9 +172,9 @@
                                         </option>
                                     </select>
                                     @error('additionalProperties[topping]')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
                                     @enderror
                                 </div>
                             </div>
@@ -178,11 +182,11 @@
                             <div class="form-group">
                                 <label for="image">Product Image</label>
                                 <input type="file" class="form-control-file @error('imgURL') is-invalid @enderror"
-                                    id="image" name="imgURL" accept="image/png, image/jpeg, image/jpg" required>
+                                       id="image" name="imgURL" accept="image/png, image/jpeg, image/jpg" required>
                                 @error('imgURL')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
 
@@ -200,28 +204,38 @@
 
 @section('custome-scripts')
     <script>
-        $('#category').change(function() {
+        $('#category').change(function () {
             const selectedValue = $(this).val();
 
             if (selectedValue === 'pizza') {
                 $('#additional-side').hide();
                 $('#additional-pizza').show();
+
+                $('#side-variant, #side-topping').removeAttr('name');
+
+                $('#pizza-variant').attr('name', 'additionalProperties[variant]');
+                $('#pizza-topping').attr('name', 'additionalProperties[topping]');
             } else if (selectedValue === 'side') {
                 $('#additional-pizza').hide();
                 $('#additional-side').show();
+
+                $('#pizza-variant, #pizza-topping').removeAttr('name');
+
+                $('#side-variant').attr('name', 'additionalProperties[variant]');
+                $('#side-topping').attr('name', 'additionalProperties[topping]');
             } else {
                 $('#additional-pizza').hide();
                 $('#additional-side').hide();
             }
         });
 
-        $('#image').change(function(event) {
+        $('#image').change(function (event) {
             const input = event.target;
 
             if (input.files && input.files[0]) {
                 const reader = new FileReader();
 
-                reader.onload = function(e) {
+                reader.onload = function (e) {
                     document.getElementById('preview').src = e.target.result;
                 };
 

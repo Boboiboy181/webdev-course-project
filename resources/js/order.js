@@ -6,6 +6,8 @@ const cartItems = localStorage.getItem("cartItems")
     : [];
 const note = document.querySelector("#note") || null;
 const btnCreateOrder = document.querySelector(".btn-create-order") || null;
+const addressModal = document.getElementById('addressModal') || null;
+const confirmModal = document.getElementById('exampleModal') || null;
 
 const totalPrice = () => {
     const deliveryChecked =
@@ -30,6 +32,22 @@ btnCreateOrder?.addEventListener("click", async function (e) {
 
     if (cartItems.length === 0) {
         alert("Giỏ hàng trống");
+        return;
+    }
+
+    if (customerInfo === null) {
+        const myAddressModal = new bootstrap.Modal(addressModal, {
+            keyboard: false,
+            backdrop: "static",
+        });
+
+        const myConfirmModal = new bootstrap.Modal(confirmModal, {
+            keyboard: false,
+            backdrop: "static",
+        });
+
+        myConfirmModal.hide();
+        myAddressModal.show();
         return;
     }
 

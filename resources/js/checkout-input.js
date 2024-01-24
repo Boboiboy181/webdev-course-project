@@ -10,7 +10,7 @@ const phone = document.querySelector('.phone') || null;
 const render = () => {
     const data = JSON.parse(localStorage.getItem('address'));
 
-    if (fullNameInput === null || addressInput === null || phoneInput === null || btnSubmit === null || idInput === null) return;
+    if (fullNameInput === null || addressInput === null || phoneInput === null || btnSubmit === null || idInput === null || !data) return;
 
     address.innerHTML = data.address;
     name.innerHTML = data.fullName;

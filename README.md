@@ -15,33 +15,32 @@
 
 ### Team members
 
--   Dao Gia Hai - 21520806
--   Le Bao Chau - 21520644
--   Doan Van Anh Hien - 21520277
--   Man Ngo Thuy Tien - 21521526
--   Tran Tinh Minh Tu - 21521619
--   Nguyen Dang Hoang Ha - 21520801
+- Dao Gia Hai - 21520806
+- Le Bao Chau - 21520644
+- Doan Van Anh Hien - 21520277
+- Man Ngo Thuy Tien - 21521526
+- Tran Tinh Minh Tu - 21521619
+- Nguyen Dang Hoang Ha - 21520801
 
 ### How to run
 
--   Install php and composer on your device
--   Install mongodb driver from this [link](https://github.com/mongodb/mongo-php-driver)
--   Clone this repo
--   Run `composer install`
--   Run `npm install`
--   Update your `.env` with your key in the `.env.example`
--   Run `npm run dev` and `php artisan serve` (same time)
+- Install php and composer on your device
+- Install mongodb driver from this [link](https://github.com/mongodb/mongo-php-driver)
+- Clone this repo
+- Run `composer install`
+- Run `npm install`
+- Update your `.env` with your key in the `.env.example`
+- Run `npm run dev` and `php artisan serve` (same time)
 
 ### Admin account
 
--   Email: haidao549@gmail.com
--   Password: 12345678
+- Email: haidao549@gmail.com
+- Password: 12345678
 
 ### Things to-do
 
--   Fix a small bug in creating a pizza in admin :)
--   Code responsive for table size and make the responsive look
--   Add some cool features like intergrating google maps,...
+- Code responsive for table size and make the responsive look like the figma design
+- Add some cool features like intergrating google maps,...
 
 ## License
 

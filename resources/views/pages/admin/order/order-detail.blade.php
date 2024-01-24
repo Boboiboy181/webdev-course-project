@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <div class="detail-status-info col-md-6">
-                         <div class="detail-info detail-status">
+                        <div class="detail-info detail-status">
                             <p>Order payment method</p>
                             <p class="text-black">{{ $order->payment_method }}</p>
                         </div>
@@ -57,36 +57,39 @@
                 <div class="table-responsive detail-table">
                     <table class="table table-striped" id="dataTable">
                         <thead>
-                            <tr>
-                                <th>Product</th>
-                                <th>Category</th>
-                                <th>Quantity</th>
-                                <th>Price</th>
-                                <th>Sub total</th>
-                            </tr>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Sub total</th>
+                        </tr>
                         </thead>
                         <tbody>
-                            @foreach ($order->items as $item)
-                                <tr>
-                                    @isset($item['cheese'])
-                                        <td>{{ $item['name'] }} - {{ $item['cheese'] }} - {{ $item['crust'] }}</td>
-                                    @else
-                                        <td>{{ $item['name'] }}</td>
-                                    @endisset
-                                    <th>{{ $item['category'] }}</th>
-                                    <td>{{ $item['quantity'] }}</td>
-                                    <td>{{ number_format($item['price'], 0, ',', ',') }} VNĐ</td>
-                                    <td>{{ number_format($item['price'] * $item['quantity'], 0, ',', ',') }} VNĐ</td>
-                                </tr>
-                            @endforeach
+                        @foreach ($order->items as $item)
+                            <tr>
+                                @isset($item['cheese'])
+                                    <td>{{ $item['name'] }} - {{ $item['cheese'] }} - {{ $item['crust'] }}</td>
+                                @else
+                                    <td>{{ $item['name'] }}</td>
+                                @endisset
+                                <th>{{ $item['category'] }}</th>
+                                <td>{{ $item['quantity'] }}</td>
+                                <td>{{ number_format($item['price'], 0, ',', ',') }} VNĐ</td>
+                                <td>{{ number_format($item['price'] * $item['quantity'], 0, ',', ',') }} VNĐ</td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
                 <div class="detail-footer d-flex justify-content-between flex-wrap">
                     <div class="detail-footer_left">
                         <a class="btn btn-info" href="{{ route('admin.order') }}">Back</a>
-                        <a class="btn btn-warning" href="{{ route('admin.order.edit', ['id' => $order->_id]) }}">Edit</a>
-                        <button data-toggle="modal" data-target="#confirmModal" class="btn btn-danger">Delete</button>
+                        <a class="btn btn-warning"
+                           @if($order->status !== 'delivered')    href="{{ route('admin.order.edit', ['id' => $order->_id]) }}" @endif>Edit</a>
+                        <button data-toggle="modal" data-target="#confirmModal"
+                                class="btn btn-danger" @if($order->payment_status === 'paid') disabled @endif>Delete
+                        </button>
                     </div>
                     <div class="detail-footer_right">
                         <p class="text-danger font-weight-bold fs-1">Total:
@@ -98,7 +101,7 @@
         </div>
     </div>
     <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModal"
-        aria-hidden="true">
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
